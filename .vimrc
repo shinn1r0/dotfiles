@@ -52,10 +52,18 @@ endif
 filetype plugin indent on
 
 "" Theme
+if (empty($TMUX))
+  if (has("nvim"))
+    let $NVIM_TUI_ENABLE_TRUE_COLOR=1
+  endif
+  if (has("termguicolors"))
+    set termguicolors
+  endif
+endif
 syntax enable
 set background=dark
-colorscheme solarized
-let g:solarized_termcolors=256
+colorscheme onedark
+let g:onedark_termcolors=256
 
 "" Backup
 set directory=/tmp/backup
