@@ -13,6 +13,8 @@ rbenv install 2.5.0
 rbenv global 2.5.0
 nodebrew install-binary v9.3.0
 nodebrew use v9.3.0
+source ~/.zshenv
+source ~/.zshrc
 
 # neovim
 pip install neovim
