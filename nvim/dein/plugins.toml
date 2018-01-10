@@ -1,0 +1,52 @@
+[[plugins]]
+repo = 'Shougo/dein.vim'
+
+[[plugins]]
+repo = 'Shougo/vimproc'
+build = 'make'
+
+[[plugins]]
+repo = 'scrooloose/nerdtree'
+
+[[plugins]]
+repo = 'nathanaelkane/vim-indent-guides'
+
+[[plugins]]
+repo = 'scrooloose/nerdcommenter'
+
+
+[[plugins]]
+repo = 'tpope/vim-fugitive'
+
+[[plugins]]
+repo = 'vim-airline/vim-airline'
+hook_add = '''
+    set laststatus=2
+    set showtabline=2
+    set t_Co=256
+    let g:airline#extensions#tabline#enabled = 1
+    let g:airline#extensions#tabline#buffer_idx_mode=1
+    let g:airline#extensions#tabline#buffer_nr_show = 1
+    let g:airline_powerline_fonts=1
+    let g:airline_theme='onedark'
+'''
+
+[[plugins]]
+repo = 'vim-airline/vim-airline-themes'
+
+#Colors
+
+[[plugins]]
+repo = 'altercation/vim-colors-solarized'
+
+[[plugins]]
+repo = 'joshdick/onedark.vim'
+
+#vim
+
+[[plugins]]
+repo = 'Shougo/neocomplete.vim'
+on_i = 1
+
+[[plugins]]
+repo = 'Shougo/unite.vim'
