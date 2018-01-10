@@ -3,10 +3,10 @@ git clone https://github.com/pyenv/pyenv.git ~/.pyenv
 git clone https://github.com/rbenv/rbenv.git ~/.rbenv
 mkdir -p "$(rbenv root)"/plugins
 git clone https://github.com/rbenv/ruby-build.git "$(rbenv root)"/plugins/ruby-build
-curl -L git.io/nodebrew | perl - setup
+cd ~/ && curl -L git.io/nodebrew | perl - setup
 source ~/.zshenv
-pyenv install anaconda2-5.0.1
 pyenv install anaconda3-5.0.1
+pyenv install 2.7.14
 pyenv global anaconda3-5.0.1 anaconda2-5.0.1
 conda config --append channels conda-forge
 rbenv install 2.5.0
@@ -17,7 +17,7 @@ nodebrew use v9.3.0
 # neovim
 pip install neovim
 gem install neovim
-npm install neovim
+npm install -g neovim
 
 # terminal
 wget https://raw.githubusercontent.com/denysdovhan/gnome-terminal-one/master/one-dark.sh && chmod 744 one-dark.sh && ./one-dark.sh && rm one-dark.sh
