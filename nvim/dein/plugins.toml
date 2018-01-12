@@ -18,6 +18,13 @@ repo = 'scrooloose/nerdcommenter'
 [[plugins]]
 repo = 'tpope/vim-fugitive'
 
+# Snippets
+
+[[plugins]]
+repo = 'Shougo/neosnippet-snippets'
+
+# Airline
+
 [[plugins]]
 repo = 'vim-airline/vim-airline'
 hook_add = '''
@@ -41,12 +48,3 @@ repo = 'altercation/vim-colors-solarized'
 
 [[plugins]]
 repo = 'joshdick/onedark.vim'
-
-#vim
-
-[[plugins]]
-repo = 'Shougo/neocomplete.vim'
-on_i = 1
-
-[[plugins]]
-repo = 'Shougo/unite.vim'

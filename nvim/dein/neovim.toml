@@ -1,6 +1,5 @@
 [[plugins]]
 repo = 'Shougo/deoplete.nvim'
-on_event = 'InsertEnter'
 hook_source = '''
     let g:deoplete#enable_at_startup = 1
     let g:deoplete#enable_ignore_case = 1
@@ -16,6 +15,7 @@ hook_source = '''
     " <S-TAB>: completion back.
     inoremap <expr><S-TAB>  pumvisible() ? "\<C-p>" : "\<C-h>"
 '''
+on_i = 1
 
 [[plugins]]
 repo = 'Shougo/denite.nvim'
@@ -37,10 +37,23 @@ hook_post_source = '''
 '''
 
 [[plugins]]
+repo = 'Shougo/neosnippet.vim'
+hook_source = '''
+    imap <C-k> <Plug>(neosnippet_expand_or_jump)
+    smap <C-k> <Plug>(neosnippet_expand_or_jump)
+    xmap <C-k> <Plug>(neosnippet_expand_target)
+    if has('conceal')
+        set conceallevel=2 concealcursor=niv
+    endif
+'''
+on_i = 1
+on_ft = ['snippet']
+depends = ['neosnippet-snippets']
+
+[[plugins]]
 repo = 'Shougo/neomru.vim'
 depends = 'denite.nvim'
 
 [[plugins]]
 repo = 'Shougo/neoyank.vim'
 depends = 'denite.nvim'
-
