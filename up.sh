@@ -21,11 +21,9 @@ conda update --all -y
 # update pip packages
 pip install --upgrade pip
 pip list --outdated --format=legacy | awk '{print $1}' | xargs pip install -U
-pip check
 
 # update gem packages
 gem update --system
-gem update bundler
 gem update `gem list | cut -d ' ' -f 1`
 
 # update npm packages
