@@ -40,6 +40,9 @@ if dein#load_state(s:dein_cache_dir)
     if has('nvim')
         call dein#load_toml(s:toml_dir . '/neovim.toml', {'lazy': 0})
     endif
+    if !has('nvim')
+        call dein#load_toml(s:toml_dir . '/vim.toml', {'lazy': 0})
+    endif
     call dein#end()
     call dein#save_state()
 endif
@@ -60,9 +63,6 @@ if (empty($TMUX))
     set termguicolors
   endif
 endif
-set termguicolors
-let &t_8f = "\<Esc>[38;2;%lu;%lu;%lum"
-let &t_8b = "\<Esc>[48;2;%lu;%lu;%lum"
 syntax enable
 set background=dark
 colorscheme onedark

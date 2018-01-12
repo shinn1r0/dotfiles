@@ -40,6 +40,9 @@ if dein#load_state(s:dein_cache_dir)
     if has('nvim')
         call dein#load_toml(s:toml_dir . '/neovim.toml', {'lazy': 0})
     endif
+    if !has('nvim')
+        call dein#load_toml(s:toml_dir . '/vim.toml', {'lazy': 0})
+    endif
     call dein#end()
     call dein#save_state()
 endif
