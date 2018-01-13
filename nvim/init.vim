@@ -56,8 +56,12 @@ filetype plugin indent on
 
 "" Theme
 syntax enable
-let $NVIM_TUI_ENABLE_TRUE_COLOR=1
-set termguicolors
+if (has("nvim"))
+    let $NVIM_TUI_ENABLE_TRUE_COLOR=1
+endif
+if (has("termguicolors"))
+    set termguicolors
+endif
 colorscheme onedark
 let g:onedark_termcolors = 256
 let g:onedark_terminal_italics = 1
@@ -142,35 +146,6 @@ autocmd VimEnter,Colorscheme * :hi IndentGuidesEven ctermbg=black
 let g:indent_guides_guide_size = 2
 let g:indent_guides_start_level = 2
 
-"" Unite.vim
-let g:unite_enable_ignore_case=1
-let g:unite_enable_smart_case=1
-let g:unite_source_history_yank_enable=1
-let g:unite_source_file_mru_limit=200
-au FileType unite nnoremap <silent> <buffer> <ESC><ESC> :q<CR>
-au FileType unite inoremap <silent> <buffer> <ESC><ESC> <ESC>:q<CR>
-
-nnoremap [unite] <Nop>
-nmap <Leader>f [unite]
-nnoremap [unite]u  :<C-u>Unite -no-split<Space>
-nnoremap <silent> [unite]f :<C-u>Unite<Space>file<CR>
-nnoremap <silent> [unite]g :<C-u>Unite<Space>grep<CR>
-nnoremap <silent> [unite]b :<C-u>Unite<Space>buffer<CR>
-nnoremap <silent> [unite]m :<C-u>Unite<Space>bookmark<CR>
-nnoremap <silent> [unite]a :<C-u>UniteBookmarkAdd<CR>
-nnoremap <silent> [unite]r :<C-u>Unite<Space>file_mru<CR>
-nnoremap <silent> [unite]p :<C-u>Unite<Space>file_point<CR>
-nnoremap <silent> [unite]h :<C-u>Unite<Space>history/yank<CR>
-nnoremap <silent> [unite]d :<C-u>Unite<Space>directory/new<CR>
-nnoremap <silent> [unite]n :<C-u>Unite<Space>file/new<CR>
-nnoremap <silent> [unite]v :<C-u>UniteWithBufferDir file<CR>
-nnoremap <silent> ,vr :UniteResume<CR>
-if executable('ag')
-  let g:unite_source_grep_command = 'ag'
-  let g:unite_source_grep_default_opts = '--nogroup --nocolor --column'
-  let g:unite_source_grep_recursive_opt = ''
-endif
-
 "" Denite.nvim
 if has('nvim')
     nnoremap [denite] <Nop>
@@ -186,3 +161,54 @@ if has('nvim')
     nnoremap <silent> [denite]d :<C-u>Denite<Space>directory_rec<CR>
     nnoremap <silent> [denite]v :<C-u>DeniteBufferDir<Space>file_rec<CR>
 endif
+
+"" vim-fugitive
+nmap [figitive] <Nop>
+map <Leader>g [figitive]
+nmap <silent> [figitive]s :<C-u>Gstatus<CR>
+nmap <silent> [figitive]d :<C-u>Gdiff<CR>
+nmap <silent> [figitive]b :<C-u>Gblame<CR>
+nmap <silent> [figitive]l :<C-u>Glog<CR>
+
+"" ale
+" error mark
+let g:ale_sign_error = '⨉'
+let g:ale_sign_warning = '⚠'
+" error message format
+let g:ale_echo_msg_format = '[%linter%] %s [%severity%]'
+let g:ale_sign_column_always = 1
+" open with lint
+let g:ale_lint_on_enter = 1
+" save with lint
+let g:ale_lint_on_save = 1
+" edit without lint
+let g:ale_lint_on_text_changed = 'never'
+" location list and quickfix without lint
+let g:ale_set_loclist = 0
+let g:ale_set_quickfix = 0
+let g:ale_open_list = 0
+let g:ale_keep_list_window_open = 0
+" linter list
+let g:ale_linters = {
+\   'python': ['flake8'],
+\}
+" prefix
+nmap [ale] <Nop>
+map <C-k> [ale]
+" keymap
+nmap <silent> [ale]<C-P> <Plug>(ale_previous)
+nmap <silent> [ale]<C-N> <Plug>(ale_next)
+
+"" quickrun
+let g:quickrun_config = {
+    \ '_' : {
+        \ 'runner' : 'vimproc',
+        \ 'runner/vimproc/updatetime' : 40,
+        \ 'outputter' : 'error',
+        \ 'outputter/error/success' : 'buffer',
+        \ 'outputter/error/error'   : 'quickfix',
+        \ 'outputter/buffer/split' : ':botright 8sp',
+    \ }
+\}
+let g:quickrun_no_default_key_mappings = 1
+nmap <Leader>r :cclose<CR>:write<CR>:QuickRun -mode n<CR>
