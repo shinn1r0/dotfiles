@@ -23,7 +23,7 @@ npm install -g neovim
 
 # terminal
 wget https://raw.githubusercontent.com/denysdovhan/gnome-terminal-one/master/one-dark.sh && chmod 744 one-dark.sh && ./one-dark.sh && rm one-dark.sh
-git clone https://github.com/powerline/fonts.git --depth=1 && cd font && ./install.sh && cd .. & rm -rf fonts
+git clone https://github.com/powerline/fonts.git --depth=1 && cd fonts && ./install.sh && cd .. & rm -rf fonts
 git clone https://github.com/zplug/zplug $ZPLUG_HOME
 mkdir -p ~/.tmux/plugins
 git clone https://github.com/tmux-plugins/tpm ~/.tmux/plugins/tpm
