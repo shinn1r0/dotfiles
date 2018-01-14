@@ -54,9 +54,4 @@ vnoremap <silent><buffer> <F5> :QuickRun -mode v -type tmptex<CR>
 " QuickRun and view compile result quickly (but don't preview pdf file)
 nnoremap <silent><F5> :QuickRun<CR>
 
-augroup latex_autocompile
-  autocmd!
-  if g:quickrun_user_tex_autorun != 0
-    autocmd BufWritePost,FileWritePost *.tex :QuickRun
-  endif
-augroup END
+autocmd BufWritePost,FileWritePost *.tex QuickRun tex
