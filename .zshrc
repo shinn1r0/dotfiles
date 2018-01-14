@@ -47,6 +47,7 @@ alias btup='pactl load-module module-bluetooth-discover'
 alias update='~/up.sh'
 
 # Export====================================================================
+export EDITOR=nvim
 export VIM=/usr/share/nvim
 export VIMRUNTIME=/usr/share/nvim/runtime
 export NVIM_PYTHON_LOG_FILE=/tmp/log
