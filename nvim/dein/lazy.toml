@@ -38,17 +38,31 @@ repo = 'cespare/vim-toml'
 on_ft = 'toml'
 
 [[plugins]]
-repo = 'rcmdnk/vim-markdown'
+repo = 'plasticboy/vim-markdown'
 on_ft = ['markdown', 'mkd']
 hook_add = '''
-    let g:vim_markdown_frontmatter = 1
+    let g:vim_markdown_folding_disabled = 1
+    let g:vim_markdown_conceal = 0
+    let g:tex_conceal = ""
     let g:vim_markdown_math = 1
+    let g:vim_markdown_frontmatter = 1
+    let g:vim_markdown_toml_frontmatter = 1
+    let g:vim_markdown_json_frontmatter = 1
 '''
+
+[[plugins]]
+repo = 'kannokanno/previm'
+on_ft = ['markdown', 'mkd']
+
+[[plugins]]
+repo = 'tyru/open-browser.vim'
+on_ft = ['markdown', 'mkd']
 
 [[plugins]]
 repo = 'lervag/vimtex'
 on_ft = ['tex', 'plaintex']
 hook_add = '''
+    let g:tex_conceal = ""
     let g:vimtex_compiler_latexmk = {
       \ 'background': 1,
       \ 'build_dir': '',
