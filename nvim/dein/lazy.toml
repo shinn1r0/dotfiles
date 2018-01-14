@@ -46,8 +46,34 @@ hook_add = '''
 '''
 
 [[plugins]]
+repo = 'lervag/vimtex'
+on_ft = ['tex', 'plaintex']
+hook_add = '''
+    let g:vimtex_compiler_latexmk = {
+      \ 'background': 1,
+      \ 'build_dir': '',
+      \ 'continuous': 1,
+      \ 'options': [
+      \    '-pdfdvi', 
+      \    '-verbose',
+      \    '-file-line-error',
+      \    '-synctex=1',
+      \    '-interaction=nonstopmode',
+      \],
+      \}
+    augroup filetype
+        autocmd!
+        autocmd BufRead,BufNewFile *.tex set filetype=tex
+    augroup END
+'''
+
+[[plugins]]
 repo = 'itchyny/vim-parenmatch'
 on_ft = ['c']
+hook_add = '''
+    set noshowmatch
+    let g:loaded_matchparen = 1
+'''
 
 [[plugins]]
 repo = 'fatih/vim-go'

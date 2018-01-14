@@ -114,6 +114,7 @@ set smarttab
 
 "" KeyMap
 let g:mapleader = "\<Space>"
+let g:maplocalleader = "\<Space>"
 nnoremap <Esc><Esc> :set nohlsearch<CR>
 nnoremap s <Nop>
 nnoremap sj <C-w>j
