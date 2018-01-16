@@ -1,0 +1,10 @@
+#!/usr/bin/env xdg-open
+[Desktop Entry]
+Categories=Utility;
+Comment=A System Information
+Exec=conky
+GenericName=Information
+Icon=
+Name=Conky
+StartupNotify=false
+Type=Application
