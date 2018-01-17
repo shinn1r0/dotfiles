@@ -14,9 +14,26 @@ repo = 'nathanaelkane/vim-indent-guides'
 [[plugins]]
 repo = 'scrooloose/nerdcommenter'
 
+[[plugins]]
+repo = 'thinca/vim-quickrun'
+
+[[plugins]]
+repo = 'w0rp/ale'
+
+# Git
 
 [[plugins]]
 repo = 'tpope/vim-fugitive'
+
+[[plugins]]
+repo = 'airblade/vim-gitgutter'
+
+# Snippets
+
+[[plugins]]
+repo = 'Shougo/neosnippet-snippets'
+
+# Airline
 
 [[plugins]]
 repo = 'vim-airline/vim-airline'
@@ -41,12 +58,3 @@ repo = 'altercation/vim-colors-solarized'
 
 [[plugins]]
 repo = 'joshdick/onedark.vim'
-
-#vim
-
-[[plugins]]
-repo = 'Shougo/neocomplete.vim'
-on_i = 1
-
-[[plugins]]
-repo = 'Shougo/unite.vim'

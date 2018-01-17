@@ -13,7 +13,6 @@ autoload -Uz compinit compinit -u
 # Zsh setting===============================================================
 setopt auto_cd
 function chpwd() { ls --color }
-function git(){hub "$@"}
 zstyle ':completion:*' matcher-list 'm:{a-z}={A-Z}'
 tabs -4
 alias ...='cd ../..'
@@ -40,12 +39,14 @@ alias pipup3='pip3 install --upgrade pip'
 alias vi='VIM=/usr/share/vim VIMRUNTIME=/usr/share/vim/vim74 vi'
 alias vim='nvim'
 alias py='python'
+alias ipy='ipython'
 alias pbcopy='xsel --clipboard --input'
 alias pbpaste='xsel --clipboard --output'
 alias btup='pactl load-module module-bluetooth-discover'
 alias update='~/up.sh'
 
 # Export====================================================================
+export EDITOR=nvim
 export VIM=/usr/share/nvim
 export VIMRUNTIME=/usr/share/nvim/runtime
 export NVIM_PYTHON_LOG_FILE=/tmp/log
