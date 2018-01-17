@@ -63,7 +63,7 @@ endif
 syntax enable
 set background=dark
 colorscheme onedark
-let g:onedark_termcolors=256
+let g:onedark_termcolors=16
 
 "" Backup
 set directory=/tmp/backup
