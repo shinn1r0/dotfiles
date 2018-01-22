@@ -92,3 +92,9 @@ hook_add = '''
 [[plugins]]
 repo = 'fatih/vim-go'
 on_ft = ['go']
+
+[[plugins]]
+repo = 'baabelfish/nvim-nim'
+
+[[plugins]]
+repo = 'zah/nim.vim'
