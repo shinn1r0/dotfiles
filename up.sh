@@ -13,6 +13,7 @@ sudo tlmgr update --self --all
 cd "$(pyenv root)" && git pull
 cd "$(rbenv root)" && git pull
 cd "$(rbenv root)"/plugins/ruby-build && git pull
+cd $NIM_HOME && git pull
 
 # update anaconda packages
 conda update conda -y

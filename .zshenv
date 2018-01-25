@@ -3,6 +3,7 @@ export LD_LIBRARY_PATH='/usr/local/cuda/lib64'
 export CUDA_HOME='/usr/local/cuda'
 export ZPLUG_HOME=${HOME}/.zplug
 export PERCOL='fzf'
+export NIM_HOME=${HOME}/.nim
 export PATH=${HOME}/.nim/bin:$PATH
 export PATH=${HOME}/.nodebrew/current/bin:$PATH
 export RBENV_ROOT=${HOME}/.rbenv
