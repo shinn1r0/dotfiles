@@ -95,6 +95,21 @@ on_ft = ['go']
 
 [[plugins]]
 repo = 'baabelfish/nvim-nim'
+on_ft = ['nim']
 
 [[plugins]]
 repo = 'zah/nim.vim'
+on_ft = ['nim']
+hook_add = '''
+    fun! JumpToDef()
+        if exists("*GotoDefinition_" . &filetype)
+            call GotoDefinition_{&filetype}()
+        else
+            exe "norm! \<C-]>"
+        endif
+    endf
+
+    " Jump to tag
+    nn <M-g> :call JumpToDef()<cr>
+    ino <M-g> <esc>:call JumpToDef()<cr>i
+'''
