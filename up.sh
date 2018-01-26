@@ -40,3 +40,7 @@ gem update `gem list | cut -d ' ' -f 1`
 echo "npm packages update============================================"
 npm update -g npm
 npm update -g
+
+# update nimble packages
+echo "nimble packages update========================================="
+nimble refresh
