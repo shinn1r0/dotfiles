@@ -5,6 +5,7 @@ repo = 'davidhalter/jedi-vim'
 on_ft = 'python'
 hook_add = '''
     autocmd FileType python setlocal completeopt-=preview
+    let g:jedi#completions_command = "<C-I>"
     let g:jedi#use_tabs_not_buffers = 1
     let g:jedi#popup_on_dot = 0
 '''
