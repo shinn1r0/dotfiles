@@ -2,6 +2,7 @@
 
 # update ubuntu packages
 echo "ubuntu packages update========================================="
+sudo snap refresh
 sudo apt update
 sudo apt upgrade -y
 sudo apt autoremove -y
