@@ -1,4 +1,7 @@
 export PATH='/usr/local/texlive/2017/bin:/usr/local/bin:/usr/bin:/bin:/usr/sbin:/sbin:/usr/local/cuda/bin:/home/shin-ichiro/.local/bin'
+export EDITOR=nvim
+export VIM=/usr/share/nvim
+export VIMRUNTIME=/usr/share/nvim/runtime
 export LD_LIBRARY_PATH='/usr/local/cuda/lib64'
 export CUDA_HOME='/usr/local/cuda'
 export ZPLUG_HOME=${HOME}/.zplug
