@@ -32,6 +32,7 @@ precmd () {
 alias ls='ls --color'
 alias la='ls -a'
 alias ll='ls -l'
+alias l='view'
 alias pipu='pip list --outdated --format=legacy | awk '{print $1}' | xargs pip install -U'
 alias pipu='pip3 list --outdated --format=legacy | awk '{print $1}' | xargs pip3 install -U'
 alias pipup='pip install --upgrade pip'
