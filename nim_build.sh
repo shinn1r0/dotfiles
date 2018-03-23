@@ -1,5 +1,5 @@
-git clone https://github.com/nim-lang/Nim.git ~/.nim
-cd ~/.nim
+git clone https://github.com/nim-lang/Nim.git ~/.Nim
+cd ~/.Nim
 git clone --depth 1 https://github.com/nim-lang/csources.git
 cd csources
 sh build.sh
