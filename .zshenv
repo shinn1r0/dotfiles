@@ -1,3 +1,4 @@
+# zmodload zsh/zprof && zprof
 export PATH='/usr/local/texlive/2017/bin:/usr/local/bin:/usr/bin:/bin:/usr/sbin:/sbin:/usr/local/cuda/bin:/home/shin-ichiro/.local/bin'
 export EDITOR=nvim
 export VIM=/usr/share/nvim
