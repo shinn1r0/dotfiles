@@ -14,3 +14,4 @@ ln -s $HOME/dotfiles/nvim $HOME/.config/nvim
 cp -r $HOME/dotfiles/conky $HOME/.config/conky
 cp -r $HOME/dotfiles/autostart $HOME/.config/autostart
 ln -s $HOME/dotfiles/up.sh $HOME/up.sh
+zcompile ~/.zshrc

@@ -95,5 +95,10 @@ if ! zplug check --verbose; then
     fi
 fi
 zplug load
+
+# Zcompile==================================================================
+if [ ~/.zshrc -nt ~/.zshrc.zwc ]; then
+    zcompile ~/.zshrc
+fi
 #===========================================================================
 
