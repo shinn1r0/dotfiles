@@ -6,9 +6,9 @@ SAVEHIST=1000000
 bindkey -e
 # End of lines configured by zsh-newuser-install
 # The following lines were added by compinstall
-zstyle :compinstall filename '/home/nightshinn/.zshrc'
+# zstyle :compinstall filename '/home/shin-ichiro/.zshrc'
 
-autoload -Uz compinit compinit -u
+# autoload -Uz compinit compinit -u
 
 # Zsh setting===============================================================
 setopt auto_cd
