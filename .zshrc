@@ -45,6 +45,9 @@ alias pbcopy='xsel --clipboard --input'
 alias pbpaste='xsel --clipboard --output'
 alias btup='pactl load-module module-bluetooth-discover'
 alias update='~/up.sh'
+if (type trash-put &> /dev/null); then
+    alias rm=trash-put
+fi
 
 # Export====================================================================
 export NVIM_PYTHON_LOG_FILE=/tmp/log
