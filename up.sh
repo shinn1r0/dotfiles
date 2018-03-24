@@ -5,6 +5,7 @@ echo "ubuntu packages update========================================="
 sudo snap refresh
 sudo apt update
 sudo apt upgrade -y
+sudo apt fullupgrade
 sudo apt autoremove -y
 sudo apt autoclean -y
 
