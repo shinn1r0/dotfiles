@@ -56,8 +56,11 @@ fi
 export NVIM_PYTHON_LOG_FILE=/tmp/log
 export NVIM_PYTHON_LOG_LEVEL=DEBUG  
 export CLICOLOR=1
-export LESS='-R'
-export LESSOPEN='| /usr/share/source-highlight/src-hilite-lesspipe.sh %s'
+export PERCOL='fzf'
+if (type /usr/share/source-highlight/src-hilite-lesspipe.sh &> /dev/null); then
+    export LESS='-R'
+    export LESSOPEN='| /usr/share/source-highlight/src-hilite-lesspipe.sh %s'
+fi
 export XDG_CONFIG_HOME=${HOME}/.config
 export XDG_CACHE_HOME=${HOME}/.cache
 export XDG_DATA_HOME=${HOME}/.local/share
@@ -66,6 +69,10 @@ export RPROMPT='%F{red}[%~]%f'
 export SHELL=/usr/bin/zsh
 export LANG='en_US.UTF-8'
 export LC_ALL='en_US.UTF-8'
+if (type nvcc &> /dev/null); then
+    export LD_LIBRARY_PATH='/usr/local/cuda/lib64'
+    export CUDA_HOME='/usr/local/cuda'
+fi
 
 # Tmux======================================================================
 if [[ ! -n $TMUX ]]; then
@@ -110,7 +117,7 @@ if [ ~/.zshrc -nt ~/.zshrc.zwc ]; then
 fi
 
 # Profiling=================================================================
-if (which zprof > /dev/null 2>&1); then
+if (type zprof > /dev/null 2>&1); then
     zprof
 fi
 #===========================================================================
