@@ -15,12 +15,14 @@ pyenv global anaconda3-5.0.1 2.7.14
 conda config --append channels conda-forge
 rbenv install 2.5.0
 rbenv global 2.5.0
-nodebrew install-binary v9.3.0
-nodebrew use v9.3.0
+nodebrew install-binary v9.9.0
+nodebrew use v9.9.0
 source ~/.zshenv
 source ~/.zshrc
 
 ./tmux_build.sh
+./nim_build.sh
+./trash-cli_build.sh
 
 # neovim
 pip install neovim
