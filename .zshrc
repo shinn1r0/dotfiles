@@ -4,8 +4,7 @@ HISTFILE=~/.histfile
 HISTSIZE=1000000
 SAVEHIST=1000000
 bindkey -e
-# End of lines configured by zsh-newuser-install
-# The following lines were added by compinstall
+# End of lines configured by zsh-newuser-install The following lines were added by compinstall
 # zstyle :compinstall filename '/home/shin-ichiro/.zshrc'
 
 # autoload -Uz compinit compinit -u
@@ -14,7 +13,7 @@ bindkey -e
 setopt auto_cd
 function chpwd() { ls --color }
 function dict() {
-    grep $1 ~/dotfiles/dict/gene.txt -E -A 1 -wi --color
+    grep $1 ~/dotfiles/dict/gene.txt -E -A 1 -wi --color=always
 }
 zstyle ':completion:*' matcher-list 'm:{a-z}={A-Z}'
 tabs -4
@@ -57,6 +56,8 @@ fi
 export NVIM_PYTHON_LOG_FILE=/tmp/log
 export NVIM_PYTHON_LOG_LEVEL=DEBUG  
 export CLICOLOR=1
+export LESS='-R'
+export LESSOPEN='| /usr/share/source-highlight/src-hilite-lesspipe.sh %s'
 export XDG_CONFIG_HOME=${HOME}/.config
 export XDG_CACHE_HOME=${HOME}/.cache
 export XDG_DATA_HOME=${HOME}/.local/share
