@@ -211,5 +211,10 @@ let g:quickrun_config = {
         \ 'outputter/buffer/split' : ':botright 8sp',
     \ }
 \}
+let g:quickrun_config['markdown'] = {
+    \ 'type': 'markdown/pandoc',
+    \ 'cmdopt': '-s -f markdown_github -c ~/dotfiles/nvim/css/github-markdown.css',
+    \ 'outputter': 'browser'
+    \ }
 let g:quickrun_no_default_key_mappings = 1
 nmap <Leader>r :cclose<CR>:write<CR>:QuickRun -mode n<CR>

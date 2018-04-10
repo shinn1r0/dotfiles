@@ -51,9 +51,8 @@ hook_add = '''
     let g:vim_markdown_json_frontmatter = 1
 '''
 
-[[plugins]]
-repo = 'kannokanno/previm'
-on_ft = ['markdown', 'mkd']
+#[plugins]]
+#on_ft = ['markdown', 'mkd']
 
 [[plugins]]
 repo = 'tyru/open-browser.vim'
