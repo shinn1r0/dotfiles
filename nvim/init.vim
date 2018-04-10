@@ -213,7 +213,7 @@ let g:quickrun_config = {
 \}
 let g:quickrun_config['markdown'] = {
     \ 'type': 'markdown/pandoc',
-    \ 'cmdopt': '-s -f markdown_github -c ~/dotfiles/nvim/css/github-markdown.css',
+    \ 'cmdopt': '-s -f markdown_github -c ~/.pandoc/github.css',
     \ 'outputter': 'browser'
     \ }
 let g:quickrun_no_default_key_mappings = 1
