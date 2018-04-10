@@ -13,6 +13,9 @@ bindkey -e
 # Zsh setting===============================================================
 setopt auto_cd
 function chpwd() { ls --color }
+function dict() {
+    grep $1 ~/dotfiles/dict/gene.txt -A 1 -wi --color
+}
 zstyle ':completion:*' matcher-list 'm:{a-z}={A-Z}'
 tabs -4
 alias ...='cd ../..'
