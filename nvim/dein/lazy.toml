@@ -72,6 +72,7 @@ hook_add = '''
       \    '-interaction=nonstopmode',
       \],
       \}
+    let g:vimtex_compiler_progname = 'nvr'
     augroup filetype
         autocmd!
         autocmd BufRead,BufNewFile *.tex set filetype=tex

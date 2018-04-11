@@ -53,6 +53,7 @@ fi
 # Export====================================================================
 export NVIM_PYTHON_LOG_FILE=/tmp/log
 export NVIM_PYTHON_LOG_LEVEL=DEBUG  
+export NVIM_LISTEN_ADDRESS=/tmp/nvimsocket
 export CLICOLOR=1
 export PERCOL='fzf'
 if (type /usr/share/source-highlight/src-hilite-lesspipe.sh &> /dev/null); then
