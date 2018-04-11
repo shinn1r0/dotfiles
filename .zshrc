@@ -11,7 +11,10 @@ bindkey -e
 setopt auto_cd
 function chpwd() { ls --color }
 function dict() {
-    grep $1 ~/dotfiles/dict/gene.txt -E -A 1 -wi --color=always
+    grep $1 ~/dotfiles/dict/gene.txt -E -A 1 -wi --color=always | less -FX
+}
+function jdict() {
+    grep $1 ~/dotfiles/dict/gene.txt -E -B 1 -wi --color=always | less -FX
 }
 zstyle ':completion:*' matcher-list 'm:{a-z}={A-Z}'
 tabs -4
