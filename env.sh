@@ -1,7 +1,7 @@
 # programming language
 sudo apt-get install -y make build-essential libssl-dev zlib1g-dev libbz2-dev \
 libreadline-dev libsqlite3-dev wget curl llvm libncurses5-dev libncursesw5-dev \
-xz-utils tk-dev unixodbc-dev neovim zsh xsel git
+xz-utils tk-dev unixodbc-dev neovim zsh xsel git source-highlight
 git clone https://github.com/pyenv/pyenv.git ~/.pyenv
 git clone https://github.com/pyenv/pyenv-virtualenv.git $(pyenv root)/plugins/pyenv-virtualenv
 git clone https://github.com/rbenv/rbenv.git ~/.rbenv
