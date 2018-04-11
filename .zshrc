@@ -102,7 +102,6 @@ zplug "zsh-users/zsh-autosuggestions"
 zplug "zsh-users/zsh-completions"
 zplug "zsh-users/zsh-syntax-highlighting"
 zplug "olivierverdier/zsh-git-prompt"
-zplug "peco/peco", as:command, from:gh-r, use:"*amd64*"
 zplug "b4b4r07/enhancd", use:init.sh
 
 if ! zplug check --verbose; then
