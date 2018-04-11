@@ -59,6 +59,8 @@ export NVIM_PYTHON_LOG_LEVEL=DEBUG
 export NVIM_LISTEN_ADDRESS=/tmp/nvimsocket
 export CLICOLOR=1
 export PERCOL='fzf'
+export FZF_DEFAULT_COMMAND='rg --files --hidden --glob "!.git"'
+export FZF_DEFAULT_OPTS='--height 40% --reverse --border'
 if (type /usr/share/source-highlight/src-hilite-lesspipe.sh &> /dev/null); then
     export LESS='-R'
     export LESSOPEN='| /usr/share/source-highlight/src-hilite-lesspipe.sh %s'
