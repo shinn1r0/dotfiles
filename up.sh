@@ -25,13 +25,14 @@ cd $NIM_HOME && git pull
 
 # update anaconda packages
 echo "anaconda packages update======================================="
+conda update -n base conda -y
 conda update conda -y
 conda update --all -y
 
 # update pip packages
 echo "pip packages update============================================"
 pip install --upgrade pip
-pip list --outdated --format=legacy | awk '{print $1}' | xargs pip install -U
+pip list --outdated --format=columns | awk '{print $1}' | xargs pip install -U
 
 # update gem packages
 echo "gem packages update============================================"
