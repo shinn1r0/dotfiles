@@ -5,7 +5,7 @@ echo "ubuntu packages update========================================="
 sudo snap refresh
 sudo apt update
 sudo apt upgrade -y
-sudo apt fullupgrade
+sudo apt full-upgrade -y
 sudo apt autoremove -y
 sudo apt autoclean -y
 
@@ -32,7 +32,7 @@ conda update --all -y
 # update pip packages
 echo "pip packages update============================================"
 pip install --upgrade pip
-pip list --outdated --format=columns | awk '{print $1}' | xargs pip install -U
+pip list --outdated --format=columns | awk '{print $1}' | tail -n +3 | xargs pip install -U
 
 # update gem packages
 echo "gem packages update============================================"
