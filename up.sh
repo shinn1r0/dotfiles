@@ -32,7 +32,8 @@ conda update --all -y
 # update pip packages
 echo "pip packages update============================================"
 pip install --upgrade pip
-pip list --outdated --format=columns | awk '{print $1}' | tail -n +3 | xargs pip install -U
+pip list --outdated --format=columns | awk '{print $1}' | tail -n +3 | xargs pip install -U 2>/dev/null || echo "pip: No Packages to Update"
+pip check
 
 # update gem packages
 echo "gem packages update============================================"
