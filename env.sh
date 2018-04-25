@@ -33,6 +33,7 @@ source ~/.zshrc
 ./nim_build.sh
 ./trash-cli_build.sh
 ./ctags_build.sh
+pip install Pygments
 
 # neovim
 pip install neovim
