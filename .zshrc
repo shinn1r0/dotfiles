@@ -49,7 +49,7 @@ alias pbcopy='xsel --clipboard --input'
 alias pbpaste='xsel --clipboard --output'
 alias btup='pactl load-module module-bluetooth-discover'
 alias googledrive='fusermount -u $GOOGLEDRIVE && google-drive-ocamlfuse $GOOGLEDRIVE'
-alias update='~/up.sh'
+alias update='up.sh'
 if (type trash-put &> /dev/null); then
     alias rm=trash-put
 fi

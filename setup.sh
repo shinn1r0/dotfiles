@@ -13,5 +13,5 @@ mkdir -p $HOME/dotfiles/nvim/backup 2>/dev/null
 ln -s $HOME/dotfiles/nvim $HOME/.config/nvim
 cp -r $HOME/dotfiles/conky $HOME/.config/conky
 cp -r $HOME/dotfiles/autostart $HOME/.config/autostart
-ln -s $HOME/dotfiles/up.sh $HOME/up.sh
+ln -s $HOME/dotfiles/up.sh $HOME/.local/bin/up.sh
 zcompile ~/.zshrc
