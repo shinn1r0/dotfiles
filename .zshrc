@@ -59,6 +59,7 @@ export GOOGLEDRIVE=${HOME}/GoogleDrive
 export NVIM_PYTHON_LOG_FILE=/tmp/log
 export NVIM_PYTHON_LOG_LEVEL=DEBUG  
 export NVIM_LISTEN_ADDRESS=/tmp/nvimsocket
+export LLVM_CONFIG=/usr/lib/llvm-6.0/bin/llvm-config
 export CLICOLOR=1
 export PERCOL='fzf'
 export FZF_DEFAULT_COMMAND='rg --files --hidden --glob "!.git"'
