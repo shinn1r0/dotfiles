@@ -32,6 +32,7 @@ source ~/.zshrc
 ./tmux_build.sh
 ./nim_build.sh
 ./trash-cli_build.sh
+./ctags_build.sh
 
 # neovim
 pip install neovim
