@@ -48,12 +48,14 @@ alias ipy='ipython'
 alias pbcopy='xsel --clipboard --input'
 alias pbpaste='xsel --clipboard --output'
 alias btup='pactl load-module module-bluetooth-discover'
+alias googledrive='fusermount -u $GOOGLEDRIVE && google-drive-ocamlfuse $GOOGLEDRIVE'
 alias update='~/up.sh'
 if (type trash-put &> /dev/null); then
     alias rm=trash-put
 fi
 
 # Export====================================================================
+export GOOGLEDRIVE=${HOME}/GoogleDrive
 export NVIM_PYTHON_LOG_FILE=/tmp/log
 export NVIM_PYTHON_LOG_LEVEL=DEBUG  
 export NVIM_LISTEN_ADDRESS=/tmp/nvimsocket
