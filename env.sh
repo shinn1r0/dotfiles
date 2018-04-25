@@ -56,6 +56,7 @@ cd git-secrets/ && make install && cd ../ && rm -r git-secrets
 git secrets --register-aws --global
 git secrets --install ~/.git-templates/git-secrets
 git config --global init.templatedir '~/.git-templates/git-secrets'
+git config --global core.excludesfile ~/.gitignore_global
 
 source ~/.zshrc
 
