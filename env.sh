@@ -34,6 +34,7 @@ source ~/.zshrc
 ./trash-cli_build.sh
 ./ctags_build.sh
 pip install Pygments
+sudo apt install global
 
 # neovim
 pip install neovim
