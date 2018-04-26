@@ -3,7 +3,7 @@
 
 # Path==========================================================================
 export PATH='/usr/local/texlive/2017/bin:/usr/local/bin:/usr/bin:/bin:/usr/sbin:/sbin:/usr/local/cuda/bin:/home/shin-ichiro/.local/bin'
-export PATH=${HOME}/.nim/bin:$PATH
+export PATH=${HOME}/.Nim/bin:$PATH
 export PATH=${HOME}/.nodebrew/current/bin:$PATH
 
 # Editor========================================================================
