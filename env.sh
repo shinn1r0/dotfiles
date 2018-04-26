@@ -3,7 +3,7 @@ sudo apt install zsh xsel git source-highlight software-properties-common
 sudo add-apt-repository ppa:neovim-ppa/stable
 sudo add-apt-repository ppa:alessandro-strada/ppa
 sudo apt update
-sudo apt install unixodbc-dev neovim google-drive-ocamlfuse clamtk
+sudo apt install unixodbc-dev neovim google-drive-ocamlfuse clamtk tree
 
 # pyenv requirements
 sudo apt install -y make build-essential libssl-dev zlib1g-dev libbz2-dev \
