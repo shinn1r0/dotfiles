@@ -29,10 +29,10 @@ nodebrew use v9.9.0
 source ~/.zshenv
 source ~/.zshrc
 
-./tmux_build.sh
-./nim_build.sh
-./trash-cli_build.sh
-./ctags_build.sh
+~/dotfiles/tmux_build.sh
+~/dotfiles/nim_build.sh
+~/dotfiles/trash-cli_build.sh
+~/dotfiles/ctags_build.sh
 pip install Pygments
 sudo apt install global
 
