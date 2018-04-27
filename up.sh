@@ -2,12 +2,20 @@
 
 # update ubuntu packages
 echo "ubuntu packages update========================================="
-sudo snap refresh
 sudo apt update
 sudo apt upgrade -y
 sudo apt full-upgrade -y
 sudo apt autoremove -y
 sudo apt autoclean -y
+
+# update snap packages
+echo "snap packages update==========================================="
+sudo snap refresh
+
+# update atom packages
+echo "atom packages update==========================================="
+apm update
+apm list -bi --no-dev > $HOME/dotfiles/app/Apmfile
 
 # update texlive packages
 echo "texlive packages update========================================"
