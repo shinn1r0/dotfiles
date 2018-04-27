@@ -58,3 +58,4 @@ git config --global init.templatedir '~/.git-templates/git-secrets'
 source ~/.zshrc
 
 google-drive-ocamlfuse
+apm install --packages-file $HOME/dotfiles/app/Apmfile
