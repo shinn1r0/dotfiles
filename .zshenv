@@ -13,7 +13,7 @@ export VIMRUNTIME=/usr/share/nvim/runtime
 
 # Etc===========================================================================
 export ZPLUG_HOME=${HOME}/.zplug
-export NIM_HOME=${HOME}/.nim
+export NIM_HOME=${HOME}/.Nim
 
 # rbenv=========================================================================
 export RBENV_ROOT=${HOME}/.rbenv
