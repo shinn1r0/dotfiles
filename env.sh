@@ -1,7 +1,8 @@
 # requirements packages
-sudo apt install zsh xsel git source-highlight software-properties-common
-sudo apt update
-sudo apt install unixodbc-dev neovim google-drive-ocamlfuse clamtk tree
+sudo apt install zsh tmux xsel git source-highlight software-properties-common \
+    unixodbc-dev neovim clamtk tree ctags global papirus-icon-theme
+sudo add-apt-repository ppa:alessandro-strada/ppa
+sudo apt install google-drive-ocamlfuse
 
 # pyenv requirements
 sudo apt install -y make build-essential libssl-dev zlib1g-dev libbz2-dev \
@@ -27,12 +28,9 @@ nodebrew use v9.9.0
 source ~/.zshenv
 source ~/.zshrc
 
-~/dotfiles/tmux_build.sh
 ~/dotfiles/nim_build.sh
 ~/dotfiles/trash-cli_build.sh
-~/dotfiles/ctags_build.sh
 pip install Pygments
-sudo apt install global
 
 # neovim
 pip install neovim
@@ -57,5 +55,5 @@ git config --global init.templatedir '~/.git-templates/git-secrets'
 
 source ~/.zshrc
 
-google-drive-ocamlfuse
 apm install --packages-file $HOME/dotfiles/app/Apmfile
+google-drive-ocamlfuse
