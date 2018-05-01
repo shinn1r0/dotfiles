@@ -33,10 +33,9 @@ cd $NIM_HOME && git pull
 cd $HOME
 
 # update anaconda packages
-echo "anaconda packages update======================================="
-conda update -n base conda -y
-conda update conda -y
-conda update --all -y
+# echo "anaconda packages update======================================="
+# conda update -n base conda -y
+# conda update --all -y
 
 # update pip packages
 echo "pip packages update============================================"

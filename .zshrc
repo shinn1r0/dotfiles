@@ -76,10 +76,6 @@ export RPROMPT='%F{red}[%~]%f'
 export SHELL=/usr/bin/zsh
 export LANG='en_US.UTF-8'
 export LC_ALL='en_US.UTF-8'
-if (type nvcc &> /dev/null); then
-    export LD_LIBRARY_PATH='/usr/local/cuda/lib64'
-    export CUDA_HOME='/usr/local/cuda'
-fi
 
 # Tmux======================================================================
 if [[ ! -n $TMUX ]]; then

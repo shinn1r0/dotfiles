@@ -19,8 +19,8 @@ cd ~/ && curl -L git.io/nodebrew | perl - setup
 source ~/.zshenv
 pyenv install anaconda3-5.1.0
 pyenv install 3.6.5
-pyenv install 2.7.14
-pyenv global anaconda3-5.1.0 2.7.14
+pyenv install 2.7.15
+pyenv global anaconda3-5.1.0 2.7.15
 conda config --append channels conda-forge
 rbenv install 2.5.0
 rbenv global 2.5.0
@@ -40,14 +40,21 @@ npm install -g neovim
 
 # terminal
 cd ~/
+## one dark
 wget https://raw.githubusercontent.com/denysdovhan/gnome-terminal-one/master/one-dark.sh && chmod 744 one-dark.sh && ./one-dark.sh && rm one-dark.sh
+## powerline font
 git clone https://github.com/powerline/fonts.git --depth=1 && cd fonts && ./install.sh && cd .. & rm -rf fonts
+## zplug
 git clone https://github.com/zplug/zplug $ZPLUG_HOME
+## tmux plugins
 mkdir -p ~/.tmux/plugins
 git clone https://github.com/tmux-plugins/tpm ~/.tmux/plugins/tpm
+## fzf
 git clone --depth 1 https://github.com/junegunn/fzf.git ~/.fzf
 ~/.fzf/install
+## font
 fc-cache -vf
+## git-secrets
 git clone https://github.com/awslabs/git-secrets.git
 cd git-secrets/ && make install && cd ../ && rm -r git-secrets
 git secrets --register-aws --global

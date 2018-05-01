@@ -2,18 +2,28 @@
 #zmodload zsh/zprof && zprof
 
 # Path==========================================================================
-export PATH='/usr/local/texlive/2017/bin:/usr/local/bin:/usr/bin:/bin:/usr/sbin:/sbin:/usr/local/cuda/bin:/home/shin-ichiro/.local/bin'
-export PATH=${HOME}/.Nim/bin:$PATH
-export PATH=${HOME}/.nodebrew/current/bin:$PATH
+export PATH='/usr/local/bin:/usr/bin:/bin:/usr/sbin:/sbin'
+
+export ZPLUG_HOME=${HOME}/.zplug
+export TEXLIVE_HOME=/usr/local/texlive/2018
+export NIM_HOME=${HOME}/.Nim
+export NODEBREW_HOME=${HOME}/.nodebrew/current
+
+if (type nvcc &> /dev/null); then
+    export LD_LIBRARY_PATH='/usr/local/cuda/lib64'
+    export CUDA_HOME='/usr/local/cuda'
+    export PATH=${CUDA_HOME}/bin:$PATH
+fi
+
+export PATH=${HOME}/.local/bin:$PATH
+export PATH=${TEXLIVE_HOME}/bin:$PATH
+export PATH=${NIM_HOME}/bin:$PATH
+export PATH=${NODEBREW_HOME}/bin:$PATH
 
 # Editor========================================================================
 export EDITOR=nvim
 export VIM=/usr/share/nvim
 export VIMRUNTIME=/usr/share/nvim/runtime
-
-# Etc===========================================================================
-export ZPLUG_HOME=${HOME}/.zplug
-export NIM_HOME=${HOME}/.Nim
 
 # rbenv=========================================================================
 export RBENV_ROOT=${HOME}/.rbenv
