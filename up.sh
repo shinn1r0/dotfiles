@@ -44,9 +44,9 @@ pip list --outdated --format=columns | awk '{print $1}' | tail -n +3 | xargs pip
 pip check
 
 # update gem packages
-echo "gem packages update============================================"
-gem update --system
-gem update `gem list | cut -d ' ' -f 1`
+# echo "gem packages update============================================"
+# gem update --system
+# gem update `gem list | cut -d ' ' -f 1`
 
 # update npm packages
 echo "npm packages update============================================"
