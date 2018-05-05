@@ -11,10 +11,6 @@
     co = checkout
 [color]
     ui = auto
-[pager]
-    log = diff-highlight | less
-    show = diff-highlight | less
-    diff = diff-highlight | less
 [url "github:"]
     InsteadOf = https://github.com/
     InsteadOf = git@github.com:
