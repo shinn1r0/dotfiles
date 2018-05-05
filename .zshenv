@@ -22,6 +22,7 @@ export PATH=${NODEBREW_HOME}/bin:$PATH
 
 # Editor========================================================================
 export EDITOR=nvim
+export PAGER=less
 export VIM=/usr/share/nvim
 export VIMRUNTIME=/usr/share/nvim/runtime
 

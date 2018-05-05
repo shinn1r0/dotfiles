@@ -1,12 +1,20 @@
 [user]
     name = Shin-ichiro Naito
     email = 18505311+shinichir0@users.noreply.github.com
+[core]
+    pager = less -RFX
+    editor = vim
+    quotepath = false
 [push]
     default = simple
 [alias]
     co = checkout
 [color]
     ui = auto
+[pager]
+    log = diff-highlight | less
+    show = diff-highlight | less
+    diff = diff-highlight | less
 [url "github:"]
     InsteadOf = https://github.com/
     InsteadOf = git@github.com:
