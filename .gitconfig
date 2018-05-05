@@ -3,6 +3,10 @@
     email = 18505311+shinichir0@users.noreply.github.com
 [push]
     default = simple
+[alias]
+    co = checkout
+[color]
+    ui = auto
 [url "github:"]
     InsteadOf = https://github.com/
     InsteadOf = git@github.com:
