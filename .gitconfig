@@ -1,0 +1,8 @@
+[user]
+    name = Shin-ichiro Naito
+    email = 18505311+shinichir0@users.noreply.github.com
+[push]
+    default = simple
+[url "github:"]
+    InsteadOf = https://github.com/
+    InsteadOf = git@github.com:
