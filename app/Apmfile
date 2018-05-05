@@ -26,7 +26,7 @@ minimap-highlight-selected@4.6.1
 minimap-selection@4.5.0
 nim@0.4.1
 open-recent@5.0.0
-pdf-view@0.69.0
+pdf-view@0.70.0
 platformio-ide-terminal@2.8.1
 project-manager@3.3.5
 vim-mode-plus@1.32.0
