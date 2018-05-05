@@ -15,4 +15,4 @@ ln -s $HOME/dotfiles/git $HOME/.config/git
 cp -r $HOME/dotfiles/conky $HOME/.config/conky
 cp -r $HOME/dotfiles/autostart $HOME/.config/autostart
 ln -s $HOME/dotfiles/up.sh $HOME/.local/bin/up.sh
-zcompile ~/.zshrc
+zcompile ${HOME}/.zshrc
