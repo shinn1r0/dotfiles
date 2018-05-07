@@ -1,6 +1,6 @@
 # requirements packages
 sudo apt install zsh tmux xsel git source-highlight software-properties-common \
-    unixodbc-dev neovim clamtk tree ctags global papirus-icon-theme
+    unixodbc-dev neovim clamtk tree ctags global papirus-icon-theme calibre
 sudo add-apt-repository ppa:alessandro-strada/ppa
 sudo apt install google-drive-ocamlfuse
 sudo apt install exfat-utils exfat-fuse ntfs-3g gnome-disk-utility gparted snapd
