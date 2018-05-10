@@ -1,0 +1,10 @@
+[Desktop Entry]
+Type=Application
+Exec=google-drive-ocamlfuse /home/shin-ichiro/GoogleDrive
+Hidden=false
+NoDisplay=false
+X-GNOME-Autostart-enabled=true
+Name[en_US]=GoogleDrive
+Name=GoogleDrive
+Comment[en_US]=
+Comment=
