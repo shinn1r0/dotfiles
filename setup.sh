@@ -15,4 +15,5 @@ ln -s $HOME/dotfiles/git $HOME/.config/git
 cp -r $HOME/dotfiles/autostart $HOME/.config/autostart
 ln -s $HOME/dotfiles/up.sh $HOME/.local/bin/up.sh
 git clone https://shinichir0@github.com:shinichir0/conky $HOME/.config/conky
+cp $HOME/.config/conky/conky_template.conf $HOME/.config/conky/conky.conf
 zcompile ${HOME}/.zshrc
