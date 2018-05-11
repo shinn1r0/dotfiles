@@ -4,7 +4,7 @@ sudo apt install zsh tmux xsel git source-highlight software-properties-common \
 sudo add-apt-repository ppa:alessandro-strada/ppa
 sudo apt install google-drive-ocamlfuse
 sudo apt install exfat-utils exfat-fuse ntfs-3g gnome-disk-utility gparted snapd
-sudo apt install fonts-noto-cjk-extra fonts-noto-color-emoji fonts-noto-mono
+sudo apt install fonts-noto-cjk-extra fonts-noto-color-emoji fonts-noto-mono fonts-font-awesome
 
 # pyenv requirements
 sudo apt install -y make build-essential libssl-dev zlib1g-dev libbz2-dev \
