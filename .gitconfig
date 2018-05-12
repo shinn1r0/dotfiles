@@ -3,7 +3,7 @@
     email = 18505311+shinichir0@users.noreply.github.com
 [core]
     pager = less -RFX
-    editor = vim
+    editor = nvim
     quotepath = false
 [push]
     default = simple
