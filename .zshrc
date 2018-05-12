@@ -50,6 +50,7 @@ alias pbpaste='xsel --clipboard --output'
 alias op='xdg-open'
 alias btup='pactl load-module module-bluetooth-discover'
 alias googledrive='fusermount -u $GOOGLEDRIVE && google-drive-ocamlfuse $GOOGLEDRIVE'
+alias tree="tree -I 'nimcache'"
 alias update='up.sh'
 if (type trash-put &> /dev/null); then
     alias rm=trash-put
