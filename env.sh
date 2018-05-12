@@ -1,16 +1,21 @@
-# requirements packages
-sudo apt install zsh tmux xsel git source-highlight software-properties-common \
-    unixodbc-dev neovim clamtk tree ctags global papirus-icon-theme calibre checkinstall
+# apt packages
+# necessary packages
+sudo apt install zsh neovim tmux xsel git tree curl wget source-highlight ctags global \
+    software-properties-common unixodbc-dev clamtk papirus-icon-theme calibre snapd
+# build packages
+sudo apt install checkinstall make build-essential llvm 
+# gnome utility packages
+sudo apt install exfat-utils exfat-fuse ntfs-3g gnome-disk-utility gparted
+# font packages
+sudo apt install fonts-noto-cjk-extra fonts-noto-color-emoji fonts-noto-mono fonts-font-awesome
+# conky packages
+sudo apt install hddtemp lm-sensors
+# google drive packages
 sudo add-apt-repository ppa:alessandro-strada/ppa
 sudo apt install google-drive-ocamlfuse
-sudo apt install exfat-utils exfat-fuse ntfs-3g gnome-disk-utility gparted snapd
-sudo apt install fonts-noto-cjk-extra fonts-noto-color-emoji fonts-noto-mono fonts-font-awesome
-sudo apt install hddtemp lm-sensors
 
 # pyenv requirements
-sudo apt install -y make build-essential libssl-dev zlib1g-dev libbz2-dev \
-libreadline-dev libsqlite3-dev wget curl llvm libncurses5-dev libncursesw5-dev \
-xz-utils tk-dev
+sudo apt install -y libssl-dev zlib1g-dev libbz2-dev libreadline-dev libsqlite3-dev libncurses5-dev libncursesw5-dev xz-utils tk-dev
 # programming language
 git clone https://github.com/pyenv/pyenv.git ~/.pyenv
 git clone https://github.com/pyenv/pyenv-virtualenv.git $(pyenv root)/plugins/pyenv-virtualenv
@@ -33,6 +38,7 @@ source ~/.zshrc
 
 ~/dotfiles/nim_build.sh
 ~/dotfiles/trash-cli_build.sh
+~/dotfiles/git-secrets_build.sh
 pip install Pygments
 
 # neovim
