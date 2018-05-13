@@ -12,6 +12,7 @@ sudo apt install fonts-noto-cjk-extra fonts-noto-color-emoji fonts-noto-mono fon
 sudo apt install hddtemp lm-sensors
 # google drive packages
 sudo add-apt-repository ppa:alessandro-strada/ppa
+mkdir ~/GoogleDrive
 sudo apt install google-drive-ocamlfuse
 
 # pyenv requirements
