@@ -17,7 +17,6 @@ function jdict() {
     grep $1 ~/dotfiles/dict/gene.txt -E -B 1 -wi --color=always | less -FX
 }
 zstyle ':completion:*' matcher-list 'm:{a-z}={A-Z}'
-tabs -4
 alias ...='cd ../..'
 alias ....='cd ../../..'
 setopt auto_pushd
@@ -36,8 +35,8 @@ alias ls='ls --color'
 alias la='ls -a'
 alias ll='ls -l'
 alias l='view'
-alias pipu='pip list --outdated --format=legacy | awk '{print $1}' | xargs pip install -U'
-alias pipu='pip3 list --outdated --format=legacy | awk '{print $1}' | xargs pip3 install -U'
+alias pipu='pip list --outdated --format=columns | awk "{print $1}" | tail -n +3 | xargs pip install -U 2>/dev/null || echo "pip: No Packages to Update"'
+alias pipu3='pip3 list --outdated --format=columns | awk "{print $1}" | tail -n +3 | xargs pip3 install -U 2>/dev/null || echo "pip3: No Packages to Update"'
 alias pipup='pip install --upgrade pip'
 alias pipup3='pip3 install --upgrade pip'
 alias vi='VIM=/usr/share/vim VIMRUNTIME=/usr/share/vim/vim74 vi'
