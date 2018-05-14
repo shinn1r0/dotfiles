@@ -7,6 +7,9 @@ build = 'make'
 
 [[plugins]]
 repo = 'scrooloose/nerdtree'
+hook_add = '''
+    let g:NERDTreeWinSize=16
+'''
 
 [[plugins]]
 repo = 'nathanaelkane/vim-indent-guides'
