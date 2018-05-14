@@ -5,6 +5,7 @@
     pager = less -RFX
     editor = nvim
     quotepath = false
+	autocrlf = input
 [push]
     default = simple
 [alias]
