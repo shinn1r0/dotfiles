@@ -78,8 +78,8 @@ export LC_ALL='en_US.UTF-8'
 
 # Prompt====================================================================
 export PROMPT='
-%F{red}%n@%m$%f '
-export RPROMPT='%F{red}[%~]%f'
+%F{blue}%n@%m$%f '
+export RPROMPT='%F{blue}[%~]%f'
 function rprompt-git-current-branch {
     local branch_name st branch_status
 
