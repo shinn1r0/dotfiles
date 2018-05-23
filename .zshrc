@@ -78,8 +78,8 @@ export LC_ALL='en_US.UTF-8'
 
 # Prompt====================================================================
 export PROMPT='
-%F{blue}%n@%m$%f '
-export RPROMPT='%F{blue}[%~]%f'
+%F{red}%n@%m$%f '
+export RPROMPT='%F{red}[%~]%f'
 function rprompt-git-current-branch {
     local branch_name st branch_status
 
@@ -91,9 +91,9 @@ function rprompt-git-current-branch {
     if [[ -n `echo "$st" | grep "^nothing to"` ]]; then
         branch_status="%F{green}"
     elif [[ -n `echo "$st" | grep "^Untracked files"` ]]; then
-        branch_status="%F{red}?"
+        branch_status="%F{blue}?"
     elif [[ -n `echo "$st" | grep "^Changes not staged for commit"` ]]; then
-        branch_status="%F{red}+"
+        branch_status="%F{blue}+"
     elif [[ -n `echo "$st" | grep "^Changes to be committed"` ]]; then
         branch_status="%F{yellow}!"
     elif [[ -n `echo "$st" | grep "^rebase in progress"` ]]; then
