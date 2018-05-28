@@ -25,10 +25,9 @@ mkdir -p "$(rbenv root)"/plugins
 git clone https://github.com/rbenv/ruby-build.git "$(rbenv root)"/plugins/ruby-build
 cd ~/ && curl -L git.io/nodebrew | perl - setup
 source ~/.zshenv
-pyenv install anaconda3-5.1.0
 pyenv install 3.6.5
 pyenv install 2.7.15
-pyenv global anaconda3-5.1.0 2.7.15
+pyenv global 3.6.5 2.7.15
 conda config --append channels conda-forge
 rbenv install 2.5.0
 rbenv global 2.5.0
