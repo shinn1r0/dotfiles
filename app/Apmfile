@@ -31,5 +31,5 @@ platformio-ide-terminal@2.8.1
 project-manager@3.3.5
 show-ideographic-space@1.0.2
 vim-mode-plus@1.32.0
-wordcount@2.10.4
+wordcount@2.11.0
 
