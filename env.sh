@@ -29,10 +29,10 @@ source ~/.zshenv
 pyenv install 3.6.5
 pyenv install 2.7.15
 pyenv global 3.6.5 2.7.15
-rbenv install 2.5.0
-rbenv global 2.5.0
-nodebrew install-binary v9.9.0
-nodebrew use v9.9.0
+rbenv install 2.5.1
+rbenv global 2.5.1
+nodebrew install-binary v10.4.1
+nodebrew use v10.4.1
 source ~/.zshenv
 source ~/.zshrc
 
@@ -65,5 +65,4 @@ fc-cache -vf
 
 source ~/.zshrc
 
-apm install --packages-file $HOME/dotfiles/app/Apmfile
 google-drive-ocamlfuse

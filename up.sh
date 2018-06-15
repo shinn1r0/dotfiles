@@ -55,4 +55,6 @@ npm update -g
 
 # update nimble packages
 echo "nimble packages update========================================="
+choosenim update self
+choosenim update stable
 nimble refresh
