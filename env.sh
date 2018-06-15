@@ -24,6 +24,7 @@ git clone https://github.com/rbenv/rbenv.git ~/.rbenv
 mkdir -p "$(rbenv root)"/plugins
 git clone https://github.com/rbenv/ruby-build.git "$(rbenv root)"/plugins/ruby-build
 cd ~/ && curl -L git.io/nodebrew | perl - setup
+cd ~/ && curl https://nim-lang.org/choosenim/init.sh -sSf | sh
 source ~/.zshenv
 pyenv install 3.6.5
 pyenv install 2.7.15
