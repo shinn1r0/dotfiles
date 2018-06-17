@@ -28,8 +28,6 @@ cd "$(pyenv root)" && git pull
 echo "rbenv update====================="
 cd "$(rbenv root)" && git pull
 cd "$(rbenv root)"/plugins/ruby-build && git pull
-echo "nim update======================="
-cd $NIM_HOME && git pull
 cd $HOME
 
 # update anaconda packages
