@@ -11,7 +11,7 @@ highlight-selected@0.13.1
 indent-guide-improved@1.4.13
 intentions@1.1.5
 language-latex@1.1.1
-language-markdown@0.25.1
+language-markdown@0.26.0
 latex@0.50.0
 linter@2.2.0
 linter-ui-default@1.7.1
@@ -27,7 +27,7 @@ minimap-selection@4.5.0
 nim@0.4.1
 open-recent@5.0.0
 pdf-view@0.70.0
-platformio-ide-terminal@2.8.1
+platformio-ide-terminal@2.8.2
 project-manager@3.3.6
 show-ideographic-space@1.0.2
 vim-mode-plus@1.32.0
