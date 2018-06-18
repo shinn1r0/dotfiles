@@ -16,6 +16,9 @@ function dict() {
 function jdict() {
     grep $1 ~/dotfiles/dict/gene.txt -E -B 1 -wi --color=always | less -FX
 }
+function nimc() {
+    nim c -r -d:release -o:bin/$1 src/$1.nim
+}
 zstyle ':completion:*' matcher-list 'm:{a-z}={A-Z}'
 alias ...='cd ../..'
 alias ....='cd ../../..'
