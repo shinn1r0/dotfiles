@@ -36,7 +36,6 @@ nodebrew use v10.4.1
 source ~/.zshenv
 source ~/.zshrc
 
-~/dotfiles/nim_build.sh
 ~/dotfiles/trash-cli_build.sh
 ~/dotfiles/git-secrets_build.sh
 pip install Pygments
