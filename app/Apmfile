@@ -1,12 +1,12 @@
 atom-runner@2.7.1
 autocomplete@0.47.0
-autocomplete-modules@2.0.0
+autocomplete-modules@2.1.0
 autocomplete-paths@2.12.2
 autocomplete-python@1.10.5
 busy-signal@1.4.3
 ex-mode@0.18.0
 file-icons@2.1.21
-git-plus@7.10.2
+git-plus@7.12.0
 highlight-selected@0.13.1
 indent-guide-improved@1.4.13
 intentions@1.1.5
@@ -16,7 +16,7 @@ latex@0.50.0
 linter@2.2.0
 linter-ui-default@1.7.1
 markdown-preview-enhanced@0.15.6
-markdown-writer@2.7.3
+markdown-writer@2.7.4
 minimap@4.29.8
 minimap-bookmarks@0.4.2
 minimap-cursorline@0.2.0
@@ -27,9 +27,9 @@ minimap-selection@4.5.0
 nim@0.4.1
 open-recent@5.0.0
 pdf-view@0.70.0
-platformio-ide-terminal@2.8.2
+platformio-ide-terminal@2.8.3
 project-manager@3.3.6
 show-ideographic-space@1.0.2
-vim-mode-plus@1.32.0
+vim-mode-plus@1.32.1
 wordcount@3.0.0
 
