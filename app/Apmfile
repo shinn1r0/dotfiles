@@ -5,7 +5,7 @@ autocomplete-paths@2.12.2
 autocomplete-python@1.10.5
 busy-signal@1.4.3
 ex-mode@0.18.0
-file-icons@2.1.21
+file-icons@2.1.22
 git-plus@7.12.0
 highlight-selected@0.13.1
 indent-guide-improved@1.4.13
@@ -30,6 +30,6 @@ pdf-view@0.70.0
 platformio-ide-terminal@2.8.3
 project-manager@3.3.6
 show-ideographic-space@1.0.2
-vim-mode-plus@1.32.1
+vim-mode-plus@1.33.0
 wordcount@3.0.0
 
