@@ -6,6 +6,7 @@ export PATH='/usr/local/bin:/usr/bin:/bin:/usr/sbin:/sbin'
 
 export ZPLUG_HOME=${HOME}/.zplug
 export TEXLIVE_HOME=/usr/local/texlive/2018
+export GOROOT=/usr/local/go
 export NIM_HOME=${HOME}/.nimble
 export NODEBREW_HOME=${HOME}/.nodebrew/current
 
@@ -17,6 +18,7 @@ fi
 
 export PATH=${HOME}/.local/bin:$PATH
 export PATH=${TEXLIVE_HOME}/bin:$PATH
+export PATH=${GOROOT}/bin:$PATH
 export PATH=${NIM_HOME}/bin:$PATH
 export PATH=${NODEBREW_HOME}/bin:$PATH
 
