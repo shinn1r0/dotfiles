@@ -32,6 +32,7 @@ precmd () {
   echo -ne "\e]1;${PWD:t}\a"
 }
 [ -f ~/.fzf.zsh ] && source ~/.fzf.zsh
+eval "$(pipenv --completion)"
 
 # Alias=====================================================================
 alias ls='ls --color'
