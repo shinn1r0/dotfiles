@@ -38,7 +38,9 @@ source ~/.zshrc
 
 ~/dotfiles/trash-cli_build.sh
 ~/dotfiles/git-secrets_build.sh
+~/dotfiles/go_dev_tool.sh
 pip install Pygments
+pip install pipenv
 
 # neovim
 pip install neovim
@@ -47,8 +49,6 @@ npm install -g neovim
 
 # terminal
 cd ~/
-## one dark
-wget https://raw.githubusercontent.com/denysdovhan/gnome-terminal-one/master/one-dark.sh && chmod 744 one-dark.sh && ./one-dark.sh && rm one-dark.sh
 ## powerline font
 git clone https://github.com/powerline/fonts.git --depth=1 && cd fonts && ./install.sh && cd .. & rm -rf fonts
 ## zplug
