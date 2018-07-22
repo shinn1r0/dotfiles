@@ -56,14 +56,14 @@ npm update -g npm
 npm update -g
 
 # update go packages
-echo "go packages update============================================="
-go get -u github.com/golang/dep/cmd/dep
-go get -u golang.org/x/tools/cmd/goimports
-go get -u golang.org/x/lint/golint
-go get -u github.com/kisielk/errcheck
-go get -u github.com/derekparker/delve/cmd/dlv
-go get -u github.com/nsf/gocode
-go get -u github.com/rogpeppe/godef
+#echo "go packages update============================================="
+#go get -u github.com/golang/dep/cmd/dep
+#go get -u golang.org/x/tools/cmd/goimports
+#go get -u golang.org/x/lint/golint
+#go get -u github.com/kisielk/errcheck
+#go get -u github.com/derekparker/delve/cmd/dlv
+#go get -u github.com/nsf/gocode
+#go get -u github.com/rogpeppe/godef
 
 # update nimble packages
 echo "nimble packages update========================================="
