@@ -58,6 +58,22 @@ make symbolic links of dotfiles
 - tpm
 - fzf
 
+## up.sh
+- update dotfiles
+- update ubuntu packages
+- update snap packages
+- update atom packages
+- update texlive packages
+- environment
+    - pyenv
+    - rbenv
+- ~~anaconda packages~~
+- pip packages
+- ~~gem packages~~
+- npm packages
+- ~~go packages~~
+- nim packages
+
 ## Tool
 - atom_star.sh
 - go_dev_tool.sh
