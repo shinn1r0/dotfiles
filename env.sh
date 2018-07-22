@@ -39,8 +39,7 @@ source ~/.zshrc
 ~/dotfiles/trash-cli_build.sh
 ~/dotfiles/git-secrets_build.sh
 ~/dotfiles/go_dev_tool.sh
-pip install Pygments
-pip install pipenv
+pip install --upgrade pip pipenv Pygments neovim
 
 # neovim
 pip install neovim
