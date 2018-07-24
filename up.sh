@@ -1,7 +1,7 @@
 #!/bin/zsh
 
 # update dotfiles
-echo "dotfiles update================================================"
+sudo echo "dotfiles update==========================================="
 cd ${HOME}/dotfiles && git pull && cd ${HOME}
 
 # update ubuntu packages
