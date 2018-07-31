@@ -29,9 +29,11 @@ sudo tlmgr update --self --all
 echo "programming language environment packages update==============="
 echo "pyenv update====================="
 cd "$(pyenv root)" && git pull
-echo "rbenv update====================="
-cd "$(rbenv root)" && git pull
-cd "$(rbenv root)"/plugins/ruby-build && git pull
+echo "goenv update====================="
+cd "$(goenv root)" && git pull
+#echo "rbenv update====================="
+#cd "$(rbenv root)" && git pull
+#cd "$(rbenv root)"/plugins/ruby-build && git pull
 cd $HOME
 
 # update anaconda packages
