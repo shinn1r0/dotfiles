@@ -5,7 +5,7 @@
 sudo yum update
 sudo yum install –y https://dl.fedoraproject.org/pub/epel/epel-release-latest-7.noarch.rpm
 curl -o /etc/yum.repos.d/dperson-neovim-epel-7.repo https://copr.fedorainfracloud.org/coprs/dperson/neovim/repo/epel-7/dperson-neovim-epel-7.repo
-sudo yum install zsh neovim tmux xsel tree gcc 
+sudo yum install -y zsh neovim tmux xsel tree gcc 
 
 # programming language
 ~/dotfiles/env/pyenv_amazonlinux2.sh
