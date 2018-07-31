@@ -2,20 +2,15 @@
 
 # apt packages
 # necessary packages
-sudo apt install zsh neovim tmux xsel git tree curl wget source-highlight ctags global \
-    software-properties-common unixodbc-dev clamtk papirus-icon-theme calibre snapd
+sudo apt install zsh neovim tmux xsel git tree curl wget source-highlight ctags global software-properties-common unixodbc-dev snapd
 # build packages
-sudo apt install checkinstall make build-essential llvm 
+sudo apt install checkinstall make build-essential llvm
 # gnome utility packages
 sudo apt install exfat-utils exfat-fuse ntfs-3g gnome-disk-utility gparted
 # font packages
 sudo apt install fonts-noto-cjk-extra fonts-noto-color-emoji fonts-noto-mono fonts-font-awesome
 # conky packages
 sudo apt install hddtemp lm-sensors
-# google drive packages
-sudo add-apt-repository ppa:alessandro-strada/ppa
-mkdir ~/GoogleDrive
-sudo apt install google-drive-ocamlfuse
 
 # programming language
 ~/dotfiles/env/pyenv.sh
@@ -42,5 +37,3 @@ git clone --depth 1 https://github.com/junegunn/fzf.git ~/.fzf
 fc-cache -vf
 
 source ~/.zshrc
-
-google-drive-ocamlfuse
