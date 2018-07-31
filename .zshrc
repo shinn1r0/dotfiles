@@ -32,18 +32,35 @@ precmd () {
   echo -ne "\e]1;${PWD:t}\a"
 }
 [ -f ~/.fzf.zsh ] && source ~/.fzf.zsh
-eval "$(pipenv --completion)"
+if (type pipenv &> /dev/null); then
+    eval "$(pipenv --completion)"
+fi
+
+# Export====================================================================
+export GOOGLEDRIVE=${HOME}/GoogleDrive
+export NVIM_PYTHON_LOG_FILE=/tmp/log
+export NVIM_PYTHON_LOG_LEVEL=DEBUG  
+export NVIM_LISTEN_ADDRESS=/tmp/nvimsocket
+export LLVM_CONFIG=/usr/lib/llvm-6.0/bin/llvm-config
+export CLICOLOR=1
+export PERCOL='fzf'
+export FZF_DEFAULT_COMMAND='rg --files --hidden --glob "!.git"'
+export FZF_DEFAULT_OPTS='--height 40% --reverse --border'
+if (type /usr/share/source-highlight/src-hilite-lesspipe.sh &> /dev/null); then
+    export LESS='-R'
+    export LESSOPEN='| /usr/share/source-highlight/src-hilite-lesspipe.sh %s'
+fi
+export XDG_CONFIG_HOME=${HOME}/.config
+export XDG_CACHE_HOME=${HOME}/.cache
+export XDG_DATA_HOME=${HOME}/.local/share
+export SHELL=/usr/bin/zsh
+export LANG='en_US.UTF-8'
 
 # Alias=====================================================================
 alias ls='ls --color'
 alias la='ls -a'
 alias ll='ls -l'
-alias l='view'
-alias pipu='pip list --outdated --format=columns | awk "{print $1}" | tail -n +3 | xargs pip install -U 2>/dev/null || echo "pip: No Packages to Update"'
-alias pipu3='pip3 list --outdated --format=columns | awk "{print $1}" | tail -n +3 | xargs pip3 install -U 2>/dev/null || echo "pip3: No Packages to Update"'
-alias pipup='pip install --upgrade pip'
-alias pipup3='pip3 install --upgrade pip'
-alias vi='VIM=/usr/share/vim VIMRUNTIME=/usr/share/vim/vim74 vi'
+alias vi='VIM=/usr/share/vim VIMRUNTIME=/usr/share/vim/vim80 vi'
 alias vim='nvim'
 alias svim='sudoedit'
 alias py='python'
@@ -53,7 +70,6 @@ alias pbpaste='xsel --clipboard --output'
 alias op='xdg-open'
 alias btup='pactl load-module module-bluetooth-discover'
 alias googledrive='fusermount -u $GOOGLEDRIVE && google-drive-ocamlfuse $GOOGLEDRIVE'
-alias tree="tree -I 'nimcache'"
 alias update='up.sh'
 if (type trash-put &> /dev/null); then
     alias rm=trash-put

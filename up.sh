@@ -1,4 +1,4 @@
-#!/bin/zsh
+#!/usr/bin/zsh
 
 # update dotfiles
 sudo echo "dotfiles update==========================================="
