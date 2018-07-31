@@ -1,4 +1,4 @@
-#!/bin/bash
+#!/usr/bin/zsh
 
 ln -s $HOME/dotfiles/.zshenv $HOME/.zshenv
 ln -s $HOME/dotfiles/.zshrc $HOME/.zshrc

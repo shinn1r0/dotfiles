@@ -31,7 +31,7 @@ cd ~/
 ## powerline font
 git clone https://github.com/powerline/fonts.git --depth=1 && cd fonts && ./install.sh && cd .. & rm -rf fonts
 ## zplug
-git clone https://github.com/zplug/zplug $ZPLUG_HOME
+git clone https://github.com/zplug/zplug ~/.zplug
 ## tmux plugins
 mkdir -p ~/.tmux/plugins
 git clone https://github.com/tmux-plugins/tpm ~/.tmux/plugins/tpm
