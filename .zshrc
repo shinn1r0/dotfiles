@@ -155,10 +155,13 @@ zplug "zsh-users/zsh-syntax-highlighting"
 zplug "olivierverdier/zsh-git-prompt"
 zplug "b4b4r07/enhancd", use:init.sh
 
-if ! zplug check --verbose; then
-    printf "Install? [y/N]: "
-    if read -q; then
-        echo; zplug install
+if [ ! ~/.zplug/last_zshrc_check_time -nt ~/.zshrc ]; then
+    touch ~/.zplug/last_zshrc_check_time
+    if ! zplug check --verbose; then
+        printf "Install? [y/N]: "
+        if read -q; then
+            echo; zplug install
+        fi
     fi
 fi
 zplug load
