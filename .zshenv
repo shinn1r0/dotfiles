@@ -31,7 +31,7 @@ export VIMRUNTIME=/usr/share/nvim/runtime
 export ANYENV_ROOT="$HOME/.anyenv"
 export PATH="$ANYENV_ROOT/bin:$PATH"
 if command -v anyenv 1>/dev/null 2>&1; then
-  eval "$(anyenv init - --no-rehash)"
+  eval "$(anyenv init - --no-rehash zsh)"
 fi
 if command -v goenv 1>/dev/null 2>&1; then
 export GOROOT="$(goenv root)/versions/$(goenv version | awk '{print $1}')"
