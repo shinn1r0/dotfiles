@@ -25,21 +25,13 @@ apm list -bi --no-dev > $HOME/dotfiles/app/Apmfile
 echo "texlive packages update========================================"
 sudo tlmgr update --self --all
 
-# environment
-echo "programming language environment packages update==============="
-echo "pyenv update====================="
-cd "$(pyenv root)" && git pull
-echo "goenv update====================="
-cd "$(goenv root)" && git pull
-#echo "rbenv update====================="
-#cd "$(rbenv root)" && git pull
-#cd "$(rbenv root)"/plugins/ruby-build && git pull
-cd $HOME
-
-# update anaconda packages
-# echo "anaconda packages update======================================="
-# conda update -n base conda -y
-# conda update --all -y
+# update anyenv
+echo "anyenv update=================================================="
+anyenv update
+pyenv rehash
+goenv rehash
+rbenv rehash
+ndenv rehash
 
 # update pip packages
 echo "pip packages update============================================"

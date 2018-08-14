@@ -1,11 +1,12 @@
 #!/bin/zsh
 
-# goenv clone
-git clone https://github.com/syndbg/goenv.git ~/.goenv
+# goenv install
+anyenv install goenv
 source $HOME/.zshenv
 # golang install
 goenv install 1.10.3
 goenv global 1.10.3
+goenv rehash
 # golang dev tool
 ## dependency management tool
 go get -u github.com/golang/dep/cmd/dep

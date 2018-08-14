@@ -9,7 +9,6 @@ export TEXLIVE_HOME=/usr/local/texlive/2018
 export GOPATH=${HOME}/go
 export GOBIN=${GOPATH}/bin
 export NIM_HOME=${HOME}/.nimble
-export NODEBREW_HOME=${HOME}/.nodebrew/current
 
 if (type nvcc &> /dev/null); then
     export LD_LIBRARY_PATH='/usr/local/cuda/lib64'
@@ -21,7 +20,6 @@ export PATH=${HOME}/.local/bin:$PATH
 export PATH=${TEXLIVE_HOME}/bin:$PATH
 export PATH=${GOBIN}:$PATH
 export PATH=${NIM_HOME}/bin:$PATH
-export PATH=${NODEBREW_HOME}/bin:$PATH
 
 # Editor========================================================================
 export EDITOR=nvim
@@ -29,29 +27,19 @@ export PAGER=less
 export VIM=/usr/share/nvim
 export VIMRUNTIME=/usr/share/nvim/runtime
 
-# rbenv=========================================================================
-#export RBENV_ROOT=${HOME}/.rbenv
-#export PATH=$RBENV_ROOT/bin:$PATH
-#if command -v rbenv 1>/dev/null 2>&1; then
-  #eval "$(rbenv init -)"
-#fi
-
-# goenv=========================================================================
-export GOENV_ROOT="$HOME/.goenv"
-export PATH="$GOENV_ROOT/bin:$PATH"
+# Anyenv========================================================================
+export ANYENV_ROOT="$HOME/.anyenv"
+export PATH="$ANYENV_ROOT/bin:$PATH"
+if command -v anyenv 1>/dev/null 2>&1; then
+  #eval "$(anyenv init -)"
+  eval "$(env PATH="$ANYENV_ROOT/libexec:$PATH" $ANYENV_ROOT/libexec/anyenv-init - --no-rehash)"
+fi
 if command -v goenv 1>/dev/null 2>&1; then
-  eval "$(goenv init -)"
-  export GOROOT="$GOENV_ROOT/versions/$(goenv version | awk '{print $1}')"
+export GOROOT="$(goenv root)/versions/$(goenv version | awk '{print $1}')"
 fi
 
-# pyenv=========================================================================
-export PYENV_ROOT=${HOME}/.pyenv
-export PATH=$PYENV_ROOT/bin:$PATH
-if command -v pyenv 1>/dev/null 2>&1; then
-  eval "$(pyenv init -)"
-  #eval "$(pyenv virtualenv-init -)"
+# Zcompile==================================================================
+if [ ~/.zshenv -nt ~/.zshenv.zwc ]; then
+    zcompile ~/.zshenv
 fi
-#export VIRTUAL_ENV_DISABLE_PROMPT=1
-#export PIPENV_VENV_IN_PROJECT=true
-
 #===============================================================================

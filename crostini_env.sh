@@ -13,10 +13,12 @@ sudo apt install fonts-noto-cjk-extra fonts-noto-color-emoji fonts-noto-mono fon
 sudo apt install hddtemp lm-sensors
 
 # programming language
+~/dotfiles/env/anyenv.sh
 ~/dotfiles/env/pyenv.sh
 ~/dotfiles/env/goenv.sh
-#~/dotfiles/env/rbenv.sh
-#~/dotfiles/env/nodebrew.sh
+~/dotfiles/env/rbenv.sh
+~/dotfiles/env/ndenv.sh
+
 ~/dotfiles/env/trash-cli_build.sh
 ~/dotfiles/env/git-secrets_build.sh
 cd ~/ && curl https://nim-lang.org/choosenim/init.sh -sSf | sh
