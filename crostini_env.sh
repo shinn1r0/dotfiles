@@ -17,7 +17,7 @@ sudo apt install hddtemp lm-sensors
 ~/dotfiles/env/pyenv.sh
 ~/dotfiles/env/goenv.sh
 ~/dotfiles/env/rbenv.sh
-~/dotfiles/env/ndenv.sh
+~/dotfiles/env/nodenv.sh
 
 ~/dotfiles/env/trash-cli_build.sh
 ~/dotfiles/env/git-secrets_build.sh

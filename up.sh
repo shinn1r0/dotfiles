@@ -31,7 +31,7 @@ anyenv update
 pyenv rehash
 goenv rehash
 rbenv rehash
-ndenv rehash
+nodenv rehash
 
 # update pip packages
 echo "pip packages update============================================"
