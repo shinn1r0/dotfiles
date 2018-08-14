@@ -18,7 +18,7 @@ sudo snap refresh
 
 # update atom packages
 echo "atom packages update==========================================="
-apm upgrade
+apm upgrade -c false
 apm list -bi --no-dev > $HOME/dotfiles/app/Apmfile
 
 # update texlive packages
