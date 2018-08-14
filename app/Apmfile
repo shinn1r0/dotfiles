@@ -5,7 +5,7 @@ autocomplete-paths@2.12.2
 autocomplete-python@1.10.9
 busy-signal@1.4.3
 ex-mode@0.18.0
-file-icons@2.1.22
+file-icons@2.1.23
 git-plus@8.0.0
 go-plus@5.8.5
 godef@0.2.5
@@ -28,7 +28,7 @@ minimap-highlight-selected@4.6.1
 minimap-selection@4.5.0
 nim@0.4.1
 open-recent@5.0.0
-pdf-view@0.70.0
+pdf-view@0.71.0
 platformio-ide-terminal@2.8.4
 project-manager@3.3.6
 show-ideographic-space@1.0.2
