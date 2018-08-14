@@ -1,11 +1,11 @@
 #!/bin/zsh
 
 # ndenv install
-anyenv install ndenv
+anyenv install nodenv
 source $HOME/.zshenv
 # golang install
-ndenv install v10.8.0
-ndenv global v10.8.0
-ndenv rehash
+nodenv install v8.11.3
+nodenv global v8.11.3
+nodenv rehash
 
 npm install -g npm neovim
