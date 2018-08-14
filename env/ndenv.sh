@@ -8,4 +8,4 @@ ndenv install v10.8.0
 ndenv global v10.8.0
 ndenv rehash
 
-npm install -g neovim
+npm install -g npm neovim

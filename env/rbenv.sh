@@ -9,3 +9,4 @@ rbenv global 2.5.1
 rbenv rehash
 # neovim
 gem install neovim
+gem update `gem list | cut -d ' ' -f 1`
