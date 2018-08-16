@@ -1,0 +1,17 @@
+set ignorecase
+set smartcase
+set incsearch
+set hlsearch
+set showmatch matchtime=1
+set showcmd
+set clipboard+=unnamed
+set showmatch
+nnoremap <Esc><Esc> :nohlsearch<CR><ESC>
+nnoremap x "_x
+vnoremap x "_x
+noremap "+y "*y
+noremap "+Y "*Y
+noremap "+p "*p
+noremap "+P "*P
+noremap <C-S-c> "*y
+noremap <C-S-v> "*P
