@@ -60,7 +60,7 @@ npm update -g
 #go get -u github.com/rogpeppe/godef
 
 # update nimble packages
-echo "nimble packages update========================================="
-choosenim update self
-choosenim update stable
-nimble refresh
+#echo "nimble packages update========================================="
+#choosenim update self
+#choosenim update stable
+#nimble refresh
