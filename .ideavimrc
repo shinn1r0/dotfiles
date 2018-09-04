@@ -4,8 +4,10 @@ set incsearch
 set hlsearch
 set showmatch matchtime=1
 set showcmd
-set clipboard+=unnamed
+set clipboard+=unnamed,unnamedplus
 set showmatch
+set visualbell
+set noerrorbells
 nnoremap <Esc><Esc> :nohlsearch<CR><ESC>
 nnoremap x "_x
 vnoremap x "_x
