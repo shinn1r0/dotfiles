@@ -4,7 +4,7 @@ set incsearch
 set hlsearch
 set showmatch matchtime=1
 set showcmd
-set clipboard+=unnamed,unnamedplus
+set clipboard=unnamed
 set showmatch
 set visualbell
 set noerrorbells

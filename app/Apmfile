@@ -2,11 +2,11 @@ atom-runner@2.7.1
 autocomplete@0.47.0
 autocomplete-modules@2.2.0
 autocomplete-paths@2.12.2
-autocomplete-python@1.10.10
+autocomplete-python@1.10.11
 busy-signal@1.4.3
 ex-mode@0.18.0
 file-icons@2.1.24
-git-plus@8.0.2
+git-plus@8.1.0
 go-plus@5.8.6
 godef@0.2.5
 highlight-selected@0.14.0
