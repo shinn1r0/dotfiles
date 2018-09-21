@@ -5,7 +5,7 @@ autocomplete-paths@2.12.2
 autocomplete-python@1.10.12
 busy-signal@1.4.3
 ex-mode@0.18.0
-file-icons@2.1.24
+file-icons@2.1.25
 git-plus@8.1.0
 go-plus@5.8.6
 godef@0.2.5
@@ -19,7 +19,7 @@ linter@2.2.0
 linter-ui-default@1.7.1
 markdown-preview-enhanced@0.15.6
 markdown-writer@2.9.0
-minimap@4.29.8
+minimap@4.29.9
 minimap-bookmarks@0.4.2
 minimap-cursorline@0.2.0
 minimap-find-and-replace@4.5.2
