@@ -2,20 +2,21 @@
 
 for f in .??*
 do
-    [[ "$f" == ".git" ]] && continue
+    [[ "$f" == ".git" || "$f" == ".gitignore" ]] && continue
 
     echo "$f"
     ln -s $HOME/dotfiles/$f $HOME/$f
 done
 
-mkdir -p $HOME/.config 2>/dev/null
 mkdir -p $HOME/dotfiles/nvim/backup 2>/dev/null
+mkdir -p $HOME/.config 2>/dev/null
 mkdir -p $HOME/.local/bin 2> /dev/null
+mkdir -p $HOME/.local/share 2> /dev/null
+mkdir -p $HOME/.ssh 2> /dev/null
+cp -r $HOME/dotfiles/ssh/config $HOME/.ssh/config
 ln -s $HOME/dotfiles/nvim $HOME/.config/nvim
 ln -s $HOME/dotfiles/git $HOME/.config/git
-cp -r $HOME/dotfiles/autostart $HOME/.config/autostart
 ln -s $HOME/dotfiles/up.sh $HOME/.local/bin/up.sh
-git clone git@github.com:shinichir0/conky $HOME/.config/conky
-cp $HOME/.config/conky/conky_template.conf $HOME/.config/conky/conky.conf
+sudo cp -r $HOME/dotfiles/crostini/gnome-terminal.desktop /usr/share/applications/gnome-terminal.desktop
 zcompile ${HOME}/.zshenv
 zcompile ${HOME}/.zshrc

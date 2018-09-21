@@ -2,7 +2,8 @@
 
 # apt packages
 # necessary packages
-sudo apt install zsh neovim tmux xsel git tree curl wget source-highlight ctags global software-properties-common unixodbc-dev snapd
+#sudo apt install neovim tmux
+sudo apt install zsh vim xsel git tree curl wget source-highlight ctags global software-properties-common unixodbc-dev
 # build packages
 sudo apt install checkinstall make build-essential llvm
 # gnome utility packages
@@ -10,7 +11,11 @@ sudo apt install exfat-utils exfat-fuse ntfs-3g gnome-disk-utility gparted
 # font packages
 sudo apt install fonts-noto-cjk-extra fonts-noto-color-emoji fonts-noto-mono fonts-font-awesome
 # conky packages
-sudo apt install hddtemp lm-sensors
+sudo apt install conky hddtemp lm-sensors
+
+# build packages
+~/dotfiles/crostini/tmux_build.sh
+~/dotfiles/crostini/neovim_build.sh
 
 # programming language
 ~/dotfiles/env/anyenv.sh
