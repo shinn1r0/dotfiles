@@ -26,10 +26,8 @@ sudo apt install conky hddtemp lm-sensors
 
 ~/dotfiles/env/trash-cli_build.sh
 ~/dotfiles/env/git-secrets_build.sh
+~/dotfiles/env/gcp-sdk.sh
 cd ~/ && curl https://nim-lang.org/choosenim/init.sh -sSf | sh
-
-# Google Cloud SDK
-curl https://sdk.cloud.google.com | bash
 
 # terminal
 cd ~/
@@ -47,3 +45,5 @@ git clone --depth 1 https://github.com/junegunn/fzf.git ~/.fzf
 fc-cache -vf
 
 source ~/.zshrc
+
+~/dotfiles/env/github_ssh.sh

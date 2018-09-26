@@ -20,11 +20,6 @@ if (type nvcc &> /dev/null); then
     export PATH=${CUDA_HOME}/bin:$PATH
 fi
 
-# Google Cloud SDK==========================================
-if [ -f $HOME/google-cloud-sdk/path.zsh.inc ]; then
-    . $HOME/google-cloud-sdk/path.zsh.inc;
-fi
-
 # Bin=======================================================
 export PATH=${HOME}/.local/bin:$PATH
 export PATH=${TEXLIVE_HOME}/bin:$PATH
