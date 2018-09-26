@@ -28,6 +28,9 @@ sudo apt install google-drive-ocamlfuse
 ~/dotfiles/env/git-secrets_build.sh
 cd ~/ && curl https://nim-lang.org/choosenim/init.sh -sSf | sh
 
+# Google Cloud SDK
+curl https://sdk.cloud.google.com | bash
+
 # terminal
 cd ~/
 ## powerline font
