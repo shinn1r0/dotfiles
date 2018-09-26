@@ -2,14 +2,17 @@
 #zmodload zsh/zprof && zprof
 
 # Path==========================================================================
+# Global====================================================
 export PATH='/usr/local/bin:/usr/bin:/bin:/usr/sbin:/sbin'
 
+# Home======================================================
 export ZPLUG_HOME=${HOME}/.zplug
 export TEXLIVE_HOME=/usr/local/texlive/2018
 export GOPATH=${HOME}/go
 export GOBIN=${GOPATH}/bin
 export NIM_HOME=${HOME}/.nimble
 
+# Cuda======================================================
 if (type nvcc &> /dev/null); then
     export LD_LIBRARY_PATH='/usr/local/cuda/lib64'
     export LD_LIBRARY_PATH=$LD_LIBRARY_PATH:/usr/local/cuda/extras/CUPTI/lib64
@@ -17,6 +20,12 @@ if (type nvcc &> /dev/null); then
     export PATH=${CUDA_HOME}/bin:$PATH
 fi
 
+# Google Cloud SDK==========================================
+if [ -f $HOME/google-cloud-sdk/path.zsh.inc ]; then
+    . $HOME/google-cloud-sdk/path.zsh.inc;
+fi
+
+# Bin=======================================================
 export PATH=${HOME}/.local/bin:$PATH
 export PATH=${TEXLIVE_HOME}/bin:$PATH
 export PATH=${GOBIN}:$PATH

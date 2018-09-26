@@ -32,9 +32,6 @@ precmd () {
   echo -ne "\e]1;${PWD:t}\a"
 }
 [ -f ~/.fzf.zsh ] && source ~/.fzf.zsh
-if (type pipenv &> /dev/null); then
-    eval "$(pipenv --completion)"
-fi
 
 # Export====================================================================
 export GOOGLEDRIVE=${HOME}/GoogleDrive
@@ -165,6 +162,17 @@ if [ ! ~/.zplug/last_zshrc_check_time -nt ~/.zshrc ]; then
     fi
 fi
 zplug load
+
+# Completion====================================================================
+# Google Cloud SDK==========================================
+if [ -f $HOME/google-cloud-sdk/completion.zsh.inc ]; then
+    . $HOME/google-cloud-sdk/completion.zsh.inc;
+fi
+
+# Pipenv====================================================
+if (type pipenv &> /dev/null); then
+    eval "$(pipenv --completion)"
+fi
 
 # Zcompile==================================================================
 if [ ~/.zshrc -nt ~/.zshrc.zwc ]; then
