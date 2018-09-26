@@ -5,5 +5,4 @@ git clone https://github.com/pyenv/pyenv.git ~/.pyenv
 source ~/.zshenv
 pyenv install 3.6.6
 pyenv global 3.6.6
-pip install --upgrade pip pipenv neovim
-
+pip install --upgrade pip pipenv neovim jedi
