@@ -8,9 +8,9 @@ export PATH='/usr/local/bin:/usr/bin:/bin:/usr/sbin:/sbin'
 # Home======================================================
 export ZPLUG_HOME=${HOME}/.zplug
 export TEXLIVE_HOME=/usr/local/texlive/2018
+export NIM_HOME=${HOME}/.nimble
 export GOPATH=${HOME}/go
 export GOBIN=${GOPATH}/bin
-export NIM_HOME=${HOME}/.nimble
 
 # Cuda======================================================
 if (type nvcc &> /dev/null); then

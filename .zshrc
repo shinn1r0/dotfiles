@@ -16,9 +16,6 @@ function dict() {
 function jdict() {
     grep $1 ~/dotfiles/dict/gene.txt -E -B 1 -wi --color=always | less -FX
 }
-function nimc() {
-    nim c -r -d:release -o:bin/$1 src/$1.nim
-}
 zstyle ':completion:*' matcher-list 'm:{a-z}={A-Z}'
 alias ...='cd ../..'
 alias ....='cd ../../..'
@@ -129,7 +126,6 @@ source ${ZPLUG_HOME}/init.zsh
 zplug "zsh-users/zsh-autosuggestions"
 zplug "zsh-users/zsh-completions"
 zplug "zsh-users/zsh-syntax-highlighting"
-zplug "olivierverdier/zsh-git-prompt"
 zplug "b4b4r07/enhancd", use:init.sh
 
 if [ ! ~/.zplug/last_zshrc_check_time -nt ~/.zshrc ]; then
