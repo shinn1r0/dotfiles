@@ -2,20 +2,20 @@
 
 # apt packages
 # necessary packages
-sudo apt install zsh neovim tmux xsel git tree curl wget source-highlight ctags global \
+sudo apt install -y zsh neovim tmux xsel git tree curl wget source-highlight ctags global \
     software-properties-common unixodbc-dev clamtk papirus-icon-theme calibre snapd
 # build packages
-sudo apt install checkinstall make build-essential llvm
+sudo apt install -y checkinstall make build-essential llvm
 # gnome utility packages
-sudo apt install exfat-utils exfat-fuse ntfs-3g gnome-disk-utility gparted
+sudo apt install -y exfat-utils exfat-fuse ntfs-3g gnome-disk-utility gparted
 # font packages
-sudo apt install fonts-noto-cjk-extra fonts-noto-color-emoji fonts-noto-mono fonts-font-awesome
+sudo apt install -y fonts-noto-cjk-extra fonts-noto-color-emoji fonts-noto-mono fonts-font-awesome
 # conky packages
-sudo apt install conky hddtemp lm-sensors
+sudo apt install -y conky hddtemp lm-sensors
 # google drive packages
 sudo add-apt-repository ppa:alessandro-strada/ppa
 mkdir ~/GoogleDrive
-sudo apt install google-drive-ocamlfuse
+sudo apt install -y google-drive-ocamlfuse
 
 # programming language
 ~/dotfiles/env/anyenv.sh
