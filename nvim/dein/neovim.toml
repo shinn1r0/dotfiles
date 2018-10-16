@@ -57,3 +57,6 @@ depends = 'denite.nvim'
 [[plugins]]
 repo = 'Shougo/neoyank.vim'
 depends = 'denite.nvim'
+
+[[plugins]]
+repo = 'Shougo/unite-outline'
