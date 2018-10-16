@@ -192,6 +192,7 @@ let g:ale_keep_list_window_open = 0
 " linter list
 let g:ale_linters = {
 \   'python': ['flake8'],
+\   'go': ['gofmt', 'goimports', 'golint'],
 \}
 " prefix
 nmap [ale] <Nop>
