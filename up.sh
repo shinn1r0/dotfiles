@@ -47,8 +47,7 @@ nodenv rehash
 # update pip packages
 echo "pip packages update============================================"
 pip list --outdated --format=columns | tail -n +3 | awk '{print $1}' | xargs pip install -U 2>/dev/null || echo "No Packages to Update"
-pip install pip==18.0
-pip check
+#pip check
 
 # update gem packages
 #echo "gem packages update============================================"
