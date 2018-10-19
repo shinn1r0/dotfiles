@@ -12,10 +12,6 @@ sudo apt full-upgrade -y
 sudo apt autoremove -y
 sudo apt autoclean -y
 
-# update snap packages
-echo "snap packages update==========================================="
-sudo snap refresh
-
 # update atom packages
 echo "atom packages update==========================================="
 apm upgrade -c false
@@ -41,8 +37,8 @@ echo "anyenv update=================================================="
 anyenv update
 pyenv rehash
 goenv rehash
-rbenv rehash
-nodenv rehash
+#rbenv rehash
+#nodenv rehash
 
 # update pip packages
 echo "pip packages update============================================"
@@ -74,3 +70,7 @@ pip list --outdated --format=columns | tail -n +3 | awk '{print $1}' | xargs pip
 #choosenim update self
 #choosenim update stable
 #nimble refresh
+
+# update snap packages
+#echo "snap packages update==========================================="
+#sudo snap refresh
