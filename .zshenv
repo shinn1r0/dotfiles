@@ -20,6 +20,11 @@ if [ -d /usr/local/cuda ]; then
     export PATH=${CUDA_HOME}/bin:$PATH
 fi
 
+# Google Cloud Platform=====================================
+if [ -f '{HOME}/google-cloud-sdk/path.zsh.inc' ]; then
+    . '{HOME}/google-cloud-sdk/path.zsh.inc'
+fi
+
 # Bin=======================================================
 export PATH=${HOME}/.local/bin:$PATH
 export PATH=${TEXLIVE_HOME}/bin:$PATH

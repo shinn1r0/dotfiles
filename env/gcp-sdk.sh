@@ -1,4 +1,9 @@
-export CLOUD_SDK_REPO="cloud-sdk-$(lsb_release -c -s)"
-echo "deb http://packages.cloud.google.com/apt $CLOUD_SDK_REPO main" | sudo tee -a /etc/apt/sources.list.d/google-cloud-sdk.list
-curl https://packages.cloud.google.com/apt/doc/apt-key.gpg | sudo apt-key add -
-sudo apt-get update && sudo apt-get install -y google-cloud-sdk
+echo "input gcloud versions(e.g.: 218.0.0)"
+read VERSION
+FILE="google-cloud-sdk-${VERSION}-linux-x86_64.tar.gz"
+URL="https://dl.google.com/dl/cloudsdk/channels/rapid/downloads/${FILE}"
+curl -O ${URL}
+tar -xzvf ${FILE} -C ${HOME}/
+rm ${FILE}
+${HOME}/google-cloud-sdk/install.sh
+${HOME}/google-cloud-sdk/bin/gcloud init

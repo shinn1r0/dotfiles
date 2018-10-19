@@ -142,7 +142,7 @@ zplug load
 # Completion====================================================================
 # Google Cloud SDK==========================================
 if (type gcloud &> /dev/null); then
-    . "$HOME/dotfiles/completion/completion.zsh.inc"
+    . "${HOME}/google-cloud-sdk/completion.zsh.inc"
 fi
 
 # Pipenv====================================================
