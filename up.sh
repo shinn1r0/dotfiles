@@ -32,6 +32,10 @@ fi
 echo "texlive packages update========================================"
 sudo tlmgr update --self --all
 
+# update gcloud components
+echo "gcloud components update======================================="
+gcloud components update
+
 # update anyenv
 echo "anyenv update=================================================="
 anyenv update
