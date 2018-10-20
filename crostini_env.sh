@@ -13,17 +13,16 @@ sudo apt install fonts-noto-cjk-extra fonts-noto-color-emoji fonts-noto-mono fon
 # conky packages
 sudo apt install conky hddtemp lm-sensors
 
-# build packages
-~/dotfiles/crostini/tmux_build.sh
-~/dotfiles/crostini/neovim_build.sh
-
 # programming language
 ~/dotfiles/env/anyenv.sh
 ~/dotfiles/env/pyenv.sh
 ~/dotfiles/env/goenv.sh
-~/dotfiles/env/rbenv.sh
-~/dotfiles/env/nodenv.sh
+#~/dotfiles/env/rbenv.sh
+#~/dotfiles/env/nodenv.sh
 
+# build packages
+~/dotfiles/env/tmux_build.sh
+~/dotfiles/env/neovim_build.sh
 ~/dotfiles/env/trash-cli_build.sh
 ~/dotfiles/env/git-secrets_build.sh
 ~/dotfiles/env/gcp-sdk.sh
