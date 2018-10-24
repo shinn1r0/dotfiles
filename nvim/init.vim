@@ -66,9 +66,11 @@ colorscheme onedark
 let g:onedark_termcolors = 256
 let g:onedark_terminal_italics = 1
 
-"" Backup
-set directory=/tmp/backup
-set backupdir=$XDG_CONFIG_HOME/nvim/backup
+"" Vimfiles
+set directory=$XDG_CONFIG_HOME/nvim/vimfiles/swap
+set backupdir=$XDG_CONFIG_HOME/nvim/vimfiles/backup
+set undodir=$XDG_CONFIG_HOME/nvim/vimfiles/undo
+set viminfo+=n$XDG_CONFIG_HOME/nvim/vimfiles/viminfo
 
 "" Langage
 if has("multi_lang")
