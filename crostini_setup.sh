@@ -10,7 +10,7 @@ done
 
 mkdir -p $HOME/dotfiles/nvim/vimfiles/swap 2>/dev/null
 mkdir -p $HOME/dotfiles/nvim/vimfiles/backup 2>/dev/null
-mkdir -p $HOME/dotfiles/nvim/vimfiles/undodir 2>/dev/null
+mkdir -p $HOME/dotfiles/nvim/vimfiles/undo 2>/dev/null
 mkdir -p $HOME/.config 2>/dev/null
 mkdir -p $HOME/.local/bin 2> /dev/null
 mkdir -p $HOME/.local/share 2> /dev/null
