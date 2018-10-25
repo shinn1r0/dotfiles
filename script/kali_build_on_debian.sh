@@ -13,7 +13,7 @@ sudo dpkg -i ${KEYRING_VERSION}
 sudo dpkg -i ${LIVEBUILD_VERSION}
 
 cd /usr/share/debootstrap/scripts/
-(echo 'default_mirror http://http.kali.org/kali'; sed -e 's/debian-archive-keyring.gpg/kali-archive-keyring.gpg/g' sid) | sudo tee -a kali
+(echo 'default_mirror http://http.kali.org/kali'; sed -e 's/debian-archive-keyring.gpg/kali-archive-keyring.gpg/g' sid) | sudo tee kali
 sudo ln -s kali kali-rolling
 
 echo "cloning repository============================================="
