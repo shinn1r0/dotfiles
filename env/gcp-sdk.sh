@@ -1,3 +1,5 @@
+#!/bin/zsh
+
 echo "input gcloud versions(e.g.: 218.0.0)"
 read VERSION
 FILE="google-cloud-sdk-${VERSION}-linux-x86_64.tar.gz"

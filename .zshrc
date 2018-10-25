@@ -140,6 +140,8 @@ fi
 zplug load
 
 # Completion====================================================================
+fpath=(~/.zsh/completion $fpath)
+
 # Pipenv====================================================
 if (type pipenv &> /dev/null); then
     eval "$(pipenv --completion)"
