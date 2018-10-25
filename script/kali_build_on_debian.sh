@@ -34,9 +34,15 @@ if [ -d cfg ]; then
 fi
 
 echo "change build script============================================"
-cd build
+cd ${SCRIPT_DIR}/build
 CHANGE_NUM=$(cat build.sh | grep -n -A 1 "debootstrap" | grep exit | awk -F - '{print $1}')
 sed -e "${CHANGE_NUM} s/exit/# exit/g" build.sh | sudo tee build.sh
 
 echo "start build===================================================="
 ./build.sh --distribution kali-rolling --variant gnome --verbose
+
+echo "move iso======================================================="
+mkdir ${SCRIPT_DIR}/images
+mv ${SCRIPT_DIR}/build/images/* ${SCRIPT_DIR}/images/
+cd ${SCRIPT_DIR}
+rm -rf build
