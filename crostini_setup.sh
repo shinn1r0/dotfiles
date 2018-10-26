@@ -19,6 +19,6 @@ cp -r $HOME/dotfiles/ssh/config $HOME/.ssh/config
 ln -s $HOME/dotfiles/nvim $HOME/.config/nvim
 ln -s $HOME/dotfiles/git $HOME/.config/git
 ln -s $HOME/dotfiles/up.sh $HOME/.local/bin/up.sh
-sudo cp -r $HOME/dotfiles/crostini/gnome-terminal.desktop /usr/share/applications/gnome-terminal.desktop
+sudo cp -r $HOME/dotfiles/env/gnome-terminal.desktop /usr/share/applications/gnome-terminal.desktop
 zcompile ${HOME}/.zshenv
 zcompile ${HOME}/.zshrc

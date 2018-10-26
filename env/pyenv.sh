@@ -12,4 +12,4 @@ pyenv rehash
 # requirements
 pip install --upgrade pip pipenv Pygments neovim pytest flake8 mypy pylint jedi ninja
 pip2 install --upgrade pip pipenv Pygments neovim pytest flake8 pylint jedi ninja
-ln -s $HOME/dotfiles/flake8 $HOME/.config/flake8
+ln -s $HOME/dotfiles/env/flake8 $HOME/.config/flake8
