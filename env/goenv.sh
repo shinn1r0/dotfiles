@@ -4,13 +4,14 @@
 anyenv install goenv
 source $HOME/.zshenv
 # golang install
-goenv install 1.10.3
-goenv global 1.10.3
+VERSION=$(goenv install -l | grep -E "^ *[0-9]*\.[0-9]*\.[0-9]*$" | sort -V | tail -n 1 | awk '{print $1}')
+goenv install ${VERSION}
+goenv global ${VERSION}
 goenv rehash
+
 # golang dev tool
 ## dependency management tool
 go get -u github.com/golang/dep/cmd/dep
-
 ## linter & format
 go get -u golang.org/x/tools/cmd/goimports
 go get -u golang.org/x/lint/golint

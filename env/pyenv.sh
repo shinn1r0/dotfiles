@@ -4,10 +4,11 @@
 anyenv install pyenv
 source ~/.zshenv
 # python install
-pyenv install 3.7.0
-pyenv install 3.6.6
-pyenv install 2.7.15
-pyenv global 3.6.6 2.7.15
+VERSION3=$(pyenv install -l | grep -E "^ *3\.[0-9]*\.[0-9]*$" | sort -V | tail -n 1 | awk '{print $1}')
+VERSION2=$(pyenv install -l | grep -E "^ *2\.[0-9]*\.[0-9]*$" | sort -V | tail -n 1 | awk '{print $1}')
+pyenv install ${VERSION3}
+pyenv install ${VERSION2}
+pyenv global ${VERSION3} ${VERSION2}
 pyenv rehash
 # requirements
 pip install --upgrade pip pipenv Pygments neovim pytest flake8 mypy pylint jedi ninja
