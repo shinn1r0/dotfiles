@@ -25,3 +25,5 @@
 	allowed = wJalrXUtnFEMI/K7MDENG/bPxRfiCYEXAMPLEKEY
 [init]
 	templatedir = ~/.git-templates/git-secrets
+[credential "https://source.developers.google.com"]
+	helper = gcloud.sh
