@@ -15,13 +15,13 @@ sudo apt autoclean -y
 # update atom packages
 echo "atom packages update==========================================="
 apm upgrade -c false
-apm list -bi --no-dev > $HOME/dotfiles/app/Apmfile_tmp
-if diff -q $HOME/dotfiles/app/Apmfile $HOME/dotfiles/app/Apmfile_tmp 2> /dev/null; then
+apm list -bi --no-dev > ${HOME}/dotfiles/app/Apmfile_tmp
+if diff -q ${HOME}/dotfiles/app/Apmfile ${HOME}/dotfiles/app/Apmfile_tmp 2> /dev/null; then
     rm $HOME/dotfiles/app/Apmfile_tmp
 else
-    rm $HOME/dotfiles/app/Apmfile
-    mv $HOME/dotfiles/app/Apmfile_tmp $HOME/dotfiles/app/Apmfile
-    cd $HOME/dotfiles && git add $HOME/dotfiles/app/Apmfile && git commit -m 'update' && git push && cd $HOME
+    rm ${HOME}/dotfiles/app/Apmfile
+    mv ${HOME}/dotfiles/app/Apmfile_tmp ${HOME}/dotfiles/app/Apmfile
+    cd ${HOME}/dotfiles && git add ${HOME}/dotfiles/app/Apmfile && git commit -m 'update' && git push && cd ${HOME}
 fi
 
 # update texlive packages
@@ -42,7 +42,8 @@ goenv rehash
 
 # update pip packages
 echo "pip packages update============================================"
-pip list --outdated --format=columns | tail -n +3 | awk '{print $1}' | xargs pip install -U 2>/dev/null || echo "No Packages to Update"
+pip list --outdated --format=columns | tail -n +3 | awk '{print $1}' | xargs pip install -U 2>/dev/null || echo "No pip3 Packages to Update"
+pip2 list --outdated --format=columns | tail -n +3 | awk '{print $1}' | xargs pip2 install -U 2>/dev/null || echo "No pip2 Packages to Update"
 #pip check
 
 # update gem packages

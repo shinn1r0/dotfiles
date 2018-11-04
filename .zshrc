@@ -151,6 +151,7 @@ fi
 if [ -f "${HOME}/google-cloud-sdk/completion.zsh.inc" ]; then
     . "${HOME}/google-cloud-sdk/completion.zsh.inc"
 fi
+export GOOGLE_APPLICATION_CREDENTIALS=${HOME}/Documents/gcp/gcp.json
 
 # Zcompile==================================================================
 if [ ~/.zshrc -nt ~/.zshrc.zwc ]; then

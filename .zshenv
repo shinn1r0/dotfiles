@@ -14,10 +14,11 @@ export GOBIN=${GOPATH}/bin
 
 # Cuda======================================================
 if [ -d /usr/local/cuda ]; then
-    export LD_LIBRARY_PATH='/usr/local/cuda/lib64'
-    export LD_LIBRARY_PATH=$LD_LIBRARY_PATH:/usr/local/cuda/extras/CUPTI/lib64
     export CUDA_HOME='/usr/local/cuda'
-    export PATH=${CUDA_HOME}/bin:$PATH
+    export LD_LIBRARY_PATH=${CUDA_HOME}/lib64:${LD_LIBRARY_PATH}
+    export LD_LIBRARY_PATH=${CUDA_HOME}/extras/CUPTI/lib64:${LD_LIBRARY_PATH}
+    export CPATH=${CUDA_HOME}/include:${CPATH}
+    export PATH=${CUDA_HOME}/bin:${PATH}
 fi
 
 # Google Cloud Platform=====================================
