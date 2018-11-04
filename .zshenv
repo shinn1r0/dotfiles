@@ -20,12 +20,14 @@ if [ -d /usr/local/cuda ]; then
     export CPATH=${CUDA_HOME}/include:${CPATH}
     export PATH=${CUDA_HOME}/bin:${PATH}
 fi
-
 if [ -d /usr/local/nccl ]; then
     export NCCL_ROOT='/usr/local/nccl'
     export CPATH=${NCCL_ROOT}/include:${CPATH}
     export LD_LIBRARY_PATH=${NCCL_ROOT}/lib:${LD_LIBRARY_PATH}
     export LIBRARY_PATH=${NCCL_ROOT}/lib:${LIBRARY_PATH}
+fi
+if [ -d /usr/local/TensorRT ]; then
+    export LD_LIBRARY_PATH=/usr/local/TensorRT/lib:${LD_LIBRARY_PATH}
 fi
 
 # Google Cloud Platform=====================================
