@@ -36,10 +36,10 @@ if [ -f "${HOME}/google-cloud-sdk/path.zsh.inc" ]; then
 fi
 
 # Bin=======================================================
-export PATH=${HOME}/.local/bin:$PATH
-export PATH=${TEXLIVE_HOME}/bin:$PATH
-export PATH=${GOBIN}:$PATH
-export PATH=${NIM_HOME}/bin:$PATH
+export PATH=${HOME}/.local/bin:${PATH}
+export PATH=${TEXLIVE_HOME}/bin:${PATH}
+export PATH=${GOBIN}:${PATH}
+export PATH=${NIM_HOME}/bin:${PATH}
 
 # Editor========================================================================
 export EDITOR=nvim
@@ -48,10 +48,10 @@ export VIM=/usr/share/nvim
 export VIMRUNTIME=/usr/share/nvim/runtime
 
 # Anyenv========================================================================
-export ANYENV_ROOT="$HOME/.anyenv"
-export PATH="$ANYENV_ROOT/bin:$PATH"
+export ANYENV_ROOT=${HOME}/.anyenv
+export PATH=${ANYENV_ROOT}/bin:${PATH}
 if command -v anyenv 1>/dev/null 2>&1; then
-  eval "$(env PATH="$ANYENV_ROOT/libexec:$PATH" $ANYENV_ROOT/libexec/anyenv-init - --no-rehash zsh)"
+  eval "$(env PATH="${ANYENV_ROOT}/libexec:${PATH}" ${ANYENV_ROOT}/libexec/anyenv-init - --no-rehash zsh)"
 fi
 if command -v goenv 1>/dev/null 2>&1; then
 export GOROOT="$(goenv root)/versions/$(goenv version | awk '{print $1}')"
