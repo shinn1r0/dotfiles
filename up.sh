@@ -24,10 +24,6 @@ else
     cd ${HOME}/dotfiles && git add ${HOME}/dotfiles/app/Apmfile && git commit -m 'update' && git push && cd ${HOME}
 fi
 
-# update texlive packages
-echo "texlive packages update========================================"
-sudo tlmgr update --self --all
-
 # update gcloud components
 echo "gcloud components update======================================="
 gcloud components update
@@ -71,6 +67,10 @@ pip2 list --outdated --format=columns | tail -n +3 | awk '{print $1}' | xargs pi
 #choosenim update self
 #choosenim update stable
 #nimble refresh
+
+# update texlive packages
+#echo "texlive packages update========================================"
+#sudo tlmgr update --self --all
 
 # update snap packages
 #echo "snap packages update==========================================="
