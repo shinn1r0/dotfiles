@@ -14,11 +14,11 @@ indent-guide-improved@1.4.13
 intentions@1.1.5
 language-latex@1.2.0
 language-markdown@0.27.0
-latex@0.50.0
+latex@0.50.2
 linter@2.2.0
 linter-ui-default@1.7.1
 markdown-preview-enhanced@0.15.8
-markdown-writer@2.11.1
+markdown-writer@2.11.3
 minimap@4.29.9
 minimap-bookmarks@0.4.2
 minimap-cursorline@0.2.0
