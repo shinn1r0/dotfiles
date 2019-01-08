@@ -5,7 +5,7 @@
     pager = less -RFX
     editor = nvim
     quotepath = false
-	autocrlf = input
+    autocrlf = input
 [push]
     default = simple
 [alias]
@@ -24,6 +24,6 @@
     allowed = AKIAIOSFODNN7EXAMPLE
     allowed = wJalrXUtnFEMI/K7MDENG/bPxRfiCYEXAMPLEKEY
 [init]
-	templatedir = ~/.git-templates/git-secrets
+    templatedir = ~/.git-templates/git-secrets
 [credential "https://source.developers.google.com"]
-	helper = gcloud.sh
+    helper = gcloud.sh
