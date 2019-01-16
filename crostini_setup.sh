@@ -5,6 +5,7 @@ do
     [[ "$f" == ".git" || "$f" == ".gitignore" ]] && continue
 
     echo "$f"
+    rm -rf $HOME/$f
     ln -s $HOME/dotfiles/$f $HOME/$f
 done
 
