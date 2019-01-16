@@ -1,6 +1,6 @@
 [user]
-    name = Shin-ichiro Naito
-    email = 18505311+shinichir0@users.noreply.github.com
+    name = Shinichiro Naito
+    email = github@shinichironaito.com
 [core]
     pager = less -RFX
     editor = nvim
