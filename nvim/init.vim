@@ -78,8 +78,8 @@ if has("multi_lang")
 endif
 
 "" pyenv
-let g:python_host_prog = expand('$PYENV_ROOT') . '/shims/python2'
-let g:python3_host_prog = expand('$PYENV_ROOT') . '/shims/python'
+let g:python_host_prog = system('echo -n $(which python2)')
+let g:python3_host_prog = system('type pyenv &>/dev/null && echo -n "${PYENV_ROOT}/versions/$(pyenv global | head -n 1)/bin/python" || echo -n $(which python3)')
 
 "" Shell
 if has('nvim')

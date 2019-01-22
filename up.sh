@@ -39,8 +39,7 @@ goenv rehash
 # update pip packages
 echo "pip packages update============================================"
 pip list --outdated --format=columns | tail -n +3 | awk '{print $1}' | xargs pip install -U 2>/dev/null || echo "No pip3 Packages to Update"
-pip2 list --outdated --format=columns | tail -n +3 | awk '{print $1}' | xargs pip2 install -U 2>/dev/null || echo "No pip2 Packages to Update"
-#pip check
+pip check
 
 # update gem packages
 #echo "gem packages update============================================"
