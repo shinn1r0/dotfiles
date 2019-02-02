@@ -9,5 +9,5 @@ pyenv install ${VERSION}
 pyenv global ${VERSION}
 pyenv rehash
 # requirements
-pip install --upgrade pip pipenv Pygments pynvim pytest flake8 mypy pylint jedi ninja
+pip install --upgrade pip setuptools pipenv Pygments pynvim pytest flake8 mypy pylint jedi ninja
 ln -s $HOME/dotfiles/env/flake8 $HOME/.config/flake8
