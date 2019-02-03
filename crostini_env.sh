@@ -3,15 +3,13 @@
 # apt packages
 # necessary packages
 #sudo apt install neovim tmux
-sudo apt install zsh vim xsel git tree curl wget source-highlight ctags global software-properties-common unixodbc-dev
+sudo apt install -y zsh vim xsel git tree curl wget source-highlight ctags global software-properties-common
 # build packages
-sudo apt install checkinstall make build-essential llvm
+sudo apt install -y checkinstall make build-essential llvm
 # gnome utility packages
-sudo apt install exfat-utils exfat-fuse ntfs-3g gnome-disk-utility gparted
+sudo apt install -y exfat-utils exfat-fuse ntfs-3g gnome-disk-utility gparted
 # font packages
-sudo apt install fonts-noto-cjk-extra fonts-noto-color-emoji fonts-noto-mono fonts-font-awesome
-# conky packages
-sudo apt install conky hddtemp lm-sensors
+sudo apt install -y fonts-noto-cjk-extra fonts-noto-color-emoji fonts-noto-mono fonts-font-awesome
 
 # programming language
 ~/dotfiles/env/anyenv.sh
@@ -25,8 +23,8 @@ sudo apt install conky hddtemp lm-sensors
 ~/dotfiles/env/neovim_build.sh
 ~/dotfiles/env/trash-cli_build.sh
 ~/dotfiles/env/git-secrets_build.sh
-~/dotfiles/env/gcp-sdk.sh
 cd ~/ && curl https://nim-lang.org/choosenim/init.sh -sSf | sh
+cd ~/ && curl -sSL https://get.haskellstack.org/ | sh
 
 # terminal
 cd ~/
@@ -46,3 +44,4 @@ fc-cache -vf
 source ~/.zshrc
 
 ~/dotfiles/env/github_ssh.sh
+~/dotfiles/env/gcp-sdk.sh
