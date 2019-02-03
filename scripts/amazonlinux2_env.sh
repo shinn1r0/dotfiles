@@ -8,7 +8,8 @@ curl -o /etc/yum.repos.d/dperson-neovim-epel-7.repo https://copr.fedorainfraclou
 sudo yum install -y zsh neovim tmux xsel tree gcc 
 
 # programming language
-~/dotfiles/env/pyenv_amazonlinux2.sh
+DOTPATH=$HOME/.dotfiles
+${DOTPATH}/env/pyenv_amazonlinux2.sh
 
 # terminal
 cd ~/

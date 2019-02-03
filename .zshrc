@@ -10,12 +10,6 @@ bindkey -e
 # Zsh setting===============================================================
 setopt auto_cd
 function chpwd() { ls --color }
-function dict() {
-    grep $1 ~/dotfiles/dict/gene.txt -E -A 1 -wi --color=always | less -FX
-}
-function jdict() {
-    grep $1 ~/dotfiles/dict/gene.txt -E -B 1 -wi --color=always | less -FX
-}
 zstyle ':completion:*' matcher-list 'm:{a-z}={A-Z}'
 alias ...='cd ../..'
 alias ....='cd ../../..'
@@ -51,6 +45,7 @@ if (type trash-put &> /dev/null); then
 fi
 
 # Export====================================================================
+export DOTPATH=${HOME}/.dotfiles
 export GOOGLEDRIVE=${HOME}/GoogleDrive
 export NVIM_PYTHON_LOG_FILE=/tmp/log
 export NVIM_PYTHON_LOG_LEVEL=DEBUG  
@@ -70,6 +65,14 @@ export XDG_DATA_HOME=${HOME}/.local/share
 export SHELL=/usr/bin/zsh
 export LANG='en_US.UTF-8'
 export LC_ALL='en_US.UTF-8'
+
+# Dictionary================================================================
+function dict() {
+    grep $1 ${DOTPATH}/dict/gene.txt -E -A 1 -wi --color=always | less -FX
+}
+function jdict() {
+    grep $1 ${DOTPATH}/dict/gene.txt -E -B 1 -wi --color=always | less -FX
+}
 
 # Prompt====================================================================
 export PROMPT='

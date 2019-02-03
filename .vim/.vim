@@ -1,1 +1,1 @@
-/home/shin-ichiro/dotfiles/.vim
+/home/shin-ichiro/.dotfiles/.vim

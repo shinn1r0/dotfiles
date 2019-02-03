@@ -2,7 +2,8 @@
 
 # update dotfiles
 sudo echo "dotfiles update==========================================="
-cd ${HOME}/dotfiles && git pull && cd ${HOME}
+DOTPATH=$HOME/.dotfiles
+cd ${DOTPATH} && git pull && cd ${HOME}
 
 # update ubuntu packages
 echo "ubuntu packages update========================================="
@@ -15,13 +16,13 @@ sudo apt autoclean -y
 # update atom packages
 echo "atom packages update==========================================="
 apm upgrade -c false
-apm list -bi --no-dev > ${HOME}/dotfiles/app/Apmfile_tmp
-if diff -q ${HOME}/dotfiles/app/Apmfile ${HOME}/dotfiles/app/Apmfile_tmp 2> /dev/null; then
-    rm $HOME/dotfiles/app/Apmfile_tmp
+apm list -bi --no-dev > ${DOTPATH}/app/Apmfile_tmp
+if diff -q ${DOTPATH}/app/Apmfile ${DOTPATH}/app/Apmfile_tmp 2> /dev/null; then
+    rm ${DOTPATH}pp/Apmfile_tmp
 else
-    rm ${HOME}/dotfiles/app/Apmfile
-    mv ${HOME}/dotfiles/app/Apmfile_tmp ${HOME}/dotfiles/app/Apmfile
-    cd ${HOME}/dotfiles && git add ${HOME}/dotfiles/app/Apmfile && git commit -m 'update' && git push && cd ${HOME}
+    rm ${DOTPATH}/app/Apmfile
+    mv ${DOTPATH}/app/Apmfile_tmp ${DOTPATH}/app/Apmfile
+    cd ${DOTPATH} && git add ${DOTPATH}/app/Apmfile && git commit -m 'update' && git push && cd ${HOME}
 fi
 
 # update gcloud components

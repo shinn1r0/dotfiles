@@ -1,3 +1,5 @@
+#!/bin/zsh
+
 sudo apt install -y conky-all lm-sensors hddtemp
 sudo dpkg-reconfigure hddtemp
 sudo sensors-detect
