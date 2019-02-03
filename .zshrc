@@ -46,6 +46,7 @@ fi
 
 # Export====================================================================
 export DOTPATH=${HOME}/.dotfiles
+export DOTS=${HOME}/.dotfiles
 export GOOGLEDRIVE=${HOME}/GoogleDrive
 export NVIM_PYTHON_LOG_FILE=/tmp/log
 export NVIM_PYTHON_LOG_LEVEL=DEBUG  
