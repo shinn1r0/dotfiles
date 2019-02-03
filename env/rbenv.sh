@@ -2,7 +2,7 @@
 
 # rbenv install
 anyenv install rbenv
-source ~/.zshenv
+exec $SHELL
 # ruby install
 VERSION=$(rbenv install -l | grep -E "^ *[0-9]*\.[0-9]*\.[0-9]*$" | sort -V | tail -n 1 | awk '{print $1}')
 rbenv install ${VERSION}

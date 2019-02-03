@@ -42,7 +42,7 @@ git clone --depth 1 https://github.com/junegunn/fzf.git ~/.fzf
 ## font
 fc-cache -vf
 
-source ~/.zshrc
+exec $SHELL
 
 $DOTPATH/env/github_ssh.sh
 $DOTPATH/env/gcp-sdk.sh

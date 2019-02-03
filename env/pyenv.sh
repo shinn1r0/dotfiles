@@ -2,7 +2,7 @@
 
 # pyenv install
 anyenv install pyenv
-source ~/.zshenv
+exec $SHELL
 # python install
 VERSION=$(pyenv install -l | grep -E "^ *3\.[0-9]*\.[0-9]*$" | sort -V | tail -n 1 | awk '{print $1}')
 pyenv install ${VERSION}
