@@ -1,4 +1,7 @@
 # dotfiles
+```
+zsh -c ""
+```
 ## zsh
 - .zshrc
 - .zshenv
