@@ -13,5 +13,5 @@ sudo apt install php-phalcon
 cp composer.json ~/
 cd ~
 composer install
-sudo ln -s ~/vendor/phalcon/devtools/phalcon.php /usr/bin/phalcon
+sudo ln -snfv ~/vendor/phalcon/devtools/phalcon.php /usr/bin/phalcon
 sudo chmod ugo+x /usr/bin/phalcon
