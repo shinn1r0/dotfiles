@@ -9,6 +9,7 @@ sudo apt autoclean -y
 
 # monitor
 ### setting display
+`sudo xrandr -o normal`
 #### lightdm
 ```
 sudo cp ~/.config/monitors.xml /var/lib/lightdm/.config/
