@@ -1,7 +1,9 @@
 # dotfiles
-```
-zsh -c ""
-```
+`zsh -c "$(curl -fsSL dot.shinichironaito.com)"`
+
+## install.sh
+make symbolic links of dotfiles
+
 ## zsh
 - .zshrc
 - .zshenv
@@ -17,76 +19,81 @@ zsh -c ""
 - .latexmkrc
 ## pandoc
 - .pandoc
+## ideaVim
+- .ideavimrc
+## fonts
+- .fonts
 
 # XDG_CONFIG
 ## nvim(neovim)
 - init.vim
-- ftplugin
 - dein
-- colors
-## git
-- ignore
-## conky
-- conky.conf
-## autostart
 
 # GUI_Application(app)
 ## atom
 - Apmfile
 ## Pycharm
-- settings.jar
+- vim_settings.xml
 
 # Commands
 ## dict
 my dictionary
 
-# Script
-## setup.sh
-make symbolic links of dotfiles
-
-## env.sh
+# Scripts
+## ubuntu&crostini env setting
 - require packages
 - programming
+    - anyenv
     - pyenv
-    - rbenv
-    - nodebrew
+    - goenv
+    - ~~rbenv~~
+    - ~~nodenv~~
     - nim-lang
-    - golang
+    - haskell-stack
 - build
     - trash-cli
     - git-secrets
 - neovim
-- powerline_pont
+- powerline_font
 - zplug
 - tpm
 - fzf
+- github_ssh
+- gcp_sdk
+
+## env files
+- anyenv.sh
+- pyenv.sh
+- goenv.sh
+- rbenv.sh
+- nodenv.sh
+- docker.sh
+- nvidia-docker.sh `curl -L raw.github.com/shinichir0/dotfiles/master/env/nvidia-docker.sh`
+- texlive.sh
+- kivy.sh
+- grb-customizer.sh
+- github_ssh.sh
+- gcp_sdk.sh
+- fcitx-keyboard.sh
 
 ## up.sh
 - update dotfiles
-- update ubuntu packages
-- update snap packages
+- update apt packages
 - update atom packages
-- update texlive packages
 - environment
     - pyenv
-    - rbenv
-- ~~anaconda packages~~
+    - goenv
+- update texlive packages
+- update snap packages
 - pip packages
-- ~~gem packages~~
-- npm packages
 - ~~go packages~~
-- nim packages
-
-## Tool
-- atom_star.sh
-- go_dev_tool.sh
+- ~~gem packages~~
+- ~~npm packages~~
+- ~~nim packages~~
 
 ## build
+- neovim_build.sh
 - tmux_build.sh
 - trash-cli_build.sh
 - git-secrets_build.sh
 - gnome-terminal_one-dark.sh
-
-# Wallpaper
-- desktop
-- lock-screen
