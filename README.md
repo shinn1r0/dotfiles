@@ -62,13 +62,14 @@ my dictionary
 - gcp_sdk
 
 ## env files
+`curl -fsSL dots.shinichironaito.com/env/xxx.sh`
 - anyenv.sh
 - pyenv.sh
 - goenv.sh
 - rbenv.sh
 - nodenv.sh
 - docker.sh
-- nvidia-docker.sh `curl -L raw.github.com/shinichir0/dotfiles/master/env/nvidia-docker.sh`
+- nvidia-docker.sh
 - texlive.sh
 - kivy.sh
 - grb-customizer.sh
