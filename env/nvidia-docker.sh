@@ -4,7 +4,11 @@ SCRIPT_DIR=$(cd $(dirname $0); pwd)
 DOTPATH=$HOME/.dotfiles
 
 if (type docker &> /dev/null); then
-    $DOTPATH/env/docker.sh
+    if [ -d "${DOTPATH}" ]; then
+        $DOTPATH/env/docker.sh
+    else
+        zsh -c "$(curl -fsSL dots.shinichironaito.com/env/docker.sh)"
+    fi
 fi
 
 # install nvidia-docker version=================================================
