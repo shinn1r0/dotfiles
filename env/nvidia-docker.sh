@@ -3,7 +3,7 @@
 SCRIPT_DIR=$(cd $(dirname $0); pwd)
 DOTPATH=$HOME/.dotfiles
 
-if (type docker &> /dev/null); then
+if (! type docker &> /dev/null); then
     if [ -d "${DOTPATH}" ]; then
         $DOTPATH/env/docker.sh
     else

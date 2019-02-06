@@ -22,11 +22,11 @@ $DOTPATH/env/pyenv.sh
 $DOTPATH/env/goenv.sh
 #$DOTPATH/env/rbenv.sh
 #$DOTPATH/env/nodenv.sh
+$DOTPATH/env/stack.sh
 
 $DOTPATH/env/trash-cli_build.sh
 $DOTPATH/env/git-secrets_build.sh
 cd ~/ && curl https://nim-lang.org/choosenim/init.sh -sSf | sh
-cd ~/ && curl -sSL https://get.haskellstack.org/ | sh
 
 # terminal
 cd ~/

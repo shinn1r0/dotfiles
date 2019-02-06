@@ -1,6 +1,14 @@
 #!/bin/zsh
 
 # ndenv install
+if (! type anyenv &> /dev/null); then
+    if [ -d "${DOTPATH}" ]; then
+        $DOTPATH/env/anyenv.sh
+    else
+        zsh -c "$(curl -fsSL dots.shinichironaito.com/env/anyenv.sh)"
+    fi
+fi
+
 anyenv install nodenv
 exec $SHELL
 # golang install
