@@ -11,7 +11,7 @@ make symbolic links of dotfiles
 - .vim
 - .vimrc
 ## tmux
-- tmux.conf
+- .tmux.conf
 ## git
 - .gitconfig
 - .git-templates
@@ -84,13 +84,13 @@ my dictionary
 - environment
     - pyenv
     - goenv
-- update texlive packages
-- update snap packages
 - pip packages
 - ~~go packages~~
 - ~~gem packages~~
 - ~~npm packages~~
 - ~~nim packages~~
+- ~~update texlive packages~~
+- ~~update snap packages~~
 
 ## build
 - neovim_build.sh
