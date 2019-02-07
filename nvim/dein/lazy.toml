@@ -89,6 +89,11 @@ hook_add = '''
 [[plugins]]
 repo = 'eagletmt/ghcmod-vim'
 on_ft = ['haskell']
+hook_add = '''
+    nnoremap <Leader>ht :GhcModType<cr>
+    nnoremap <Leader>htc :GhcModTypeClear<cr>
+    autocmd FileType haskell nnoremap <buffer> <leader>? :call ale#cursor#ShowCursorDetail()<cr>
+'''
 
 [[plugins]]
 repo = 'eagletmt/neco-ghc'
