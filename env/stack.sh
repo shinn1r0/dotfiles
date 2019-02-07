@@ -7,7 +7,7 @@ fi
 
 cd ${HOME}
 stack setup
-#stack build --resolver lts-8.24
 stack install --resolver lts-8.24 ghc-mod
-stack install hlint
+stack install --resolver lts-11.22 hdevtools
+stack install hlint hfmt
 cd ${SCRIPT_DIR}
