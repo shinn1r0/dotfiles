@@ -87,6 +87,18 @@ hook_add = '''
 '''
 
 [[plugins]]
+repo = 'eagletmt/ghcmod-vim'
+on_ft = ['haskell']
+
+[[plugins]]
+repo = 'eagletmt/neco-ghc'
+on_ft = ['haskell']
+on_i = 1
+hook_add = '''
+    let g:ycm_semantic_triggers = {'haskell' : ['.']}
+'''
+
+[[plugins]]
 repo = 'itchyny/vim-parenmatch'
 on_ft = ['c']
 hook_add = '''
