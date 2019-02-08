@@ -5,9 +5,9 @@ sudo echo "dotfiles update==========================================="
 DOTPATH=$HOME/.dotfiles
 cd ${DOTPATH} && git pull && cd ${HOME}
 
-# update ubuntu packages
+# update apt packages
 if (type apt &> /dev/null); then
-    echo "ubuntu packages update========================================="
+    echo "apt packages update========================================="
     sudo apt update
     sudo apt upgrade -y
     sudo apt full-upgrade -y

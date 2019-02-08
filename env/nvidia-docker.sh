@@ -4,10 +4,25 @@ SCRIPT_DIR=$(cd $(dirname $0); pwd)
 DOTPATH=$HOME/.dotfiles
 
 if (! type docker &> /dev/null); then
-    if [ -d "${DOTPATH}" ]; then
-        $DOTPATH/env/docker.sh
-    else
-        zsh -c "$(curl -fsSL dots.shinichironaito.com/env/docker.sh)"
+    dist=$(. /etc/os-release;echo $ID)
+    if ( $dist = "ubuntu" ); then
+        if [ -d "${DOTPATH}" ]; then
+            $DOTPATH/env/docker.sh
+        else
+            zsh -c "$(curl -fsSL dots.shinichironaito.com/env/docker.sh)"
+        fi
+    elif ( $dist = "debian" ); then
+        if [ -d "${DOTPATH}" ]; then
+            $DOTPATH/env/crostini-docker.sh
+        else
+            zsh -c "$(curl -fsSL dots.shinichironaito.com/env/crostini-docker.sh)"
+        fi
+    elif ( $dist = "centos" ); then
+        if [ -d "${DOTPATH}" ]; then
+            $DOTPATH/env/al2-docker.sh
+        else
+            zsh -c "$(curl -fsSL dots.shinichironaito.com/env/al2-docker.sh)"
+        fi
     fi
 fi
 
