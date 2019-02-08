@@ -17,7 +17,7 @@ rm ${LIVEBUILD_VERSION}
 
 cd /usr/share/debootstrap/scripts/
 (echo 'default_mirror http://http.kali.org/kali'; sed -e 's/debian-archive-keyring.gpg/kali-archive-keyring.gpg/g' sid) | sudo tee kali
-sudo ln -snfv kali kali-rolling
+sudo ln -s kali kali-rolling
 
 echo "cloning repository============================================="
 cd ${SCRIPT_DIR}
