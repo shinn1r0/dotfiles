@@ -9,7 +9,8 @@ sudo yum install -y zsh neovim tmux xsel tree gcc
 
 # programming language
 DOTPATH=$HOME/.dotfiles
-${DOTPATH}/env/pyenv_amazonlinux2.sh
+${DOTPATH}/env/amzn-pyenv.sh
+${DOTPATH}/env/amzn-tmux_build.sh
 
 # terminal
 cd ~/
