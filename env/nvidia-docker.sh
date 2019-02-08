@@ -17,11 +17,11 @@ if (! type docker &> /dev/null); then
         else
             zsh -c "$(curl -fsSL dots.shinichironaito.com/env/crostini-docker.sh)"
         fi
-    elif ( $dist = "centos" ); then
+    elif ( $dist = "amzn" ); then
         if [ -d "${DOTPATH}" ]; then
-            $DOTPATH/env/al2-docker.sh
+            $DOTPATH/env/amzn-docker.sh
         else
-            zsh -c "$(curl -fsSL dots.shinichironaito.com/env/al2-docker.sh)"
+            zsh -c "$(curl -fsSL dots.shinichironaito.com/env/amzn-docker.sh)"
         fi
     fi
 fi
