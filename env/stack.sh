@@ -9,5 +9,6 @@ cd ${HOME}
 stack setup
 stack install --resolver lts-8.24 ghc-mod
 stack install --resolver lts-11.22 hdevtools
-stack install hlint hfmt
+stack install hlint hindent
+#stack install hfmt
 cd ${SCRIPT_DIR}
