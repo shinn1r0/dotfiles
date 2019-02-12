@@ -12,6 +12,7 @@
     co = checkout
     plog = log --pretty='format:%C(yellow)%h %C(green)%cd %C(reset)%s %C(red)%d %C(cyan)[%an]' --date=iso
     glog = log --pretty='format:%C(yellow)%h %C(green)%cd %C(reset)%s %C(red)%d %C(cyan)[%an]' --date=format:'%c' --all --graph
+    ignore = "!gi() { curl -sL https://www.gitignore.io/api/$@ ;}; gi"
 [color]
     ui = auto
 [url "git@github.com:"]
