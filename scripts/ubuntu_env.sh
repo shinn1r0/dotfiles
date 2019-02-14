@@ -44,7 +44,7 @@ git clone --depth 1 https://github.com/junegunn/fzf.git ~/.fzf
 fc-cache -vf
 cp -r $DOTPATH/autostart $HOME/.config/autostart
 
-exec $SHELL
+exec $SHELL -l
 
 google-drive-ocamlfuse
 
