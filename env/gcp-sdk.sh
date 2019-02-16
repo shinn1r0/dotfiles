@@ -15,5 +15,3 @@ tar -xzvf ${FILE} -C ${HOME}/
 rm ${FILE}
 ${HOME}/google-cloud-sdk/install.sh
 ${HOME}/google-cloud-sdk/bin/gcloud init
-exec $SHELL -l
-gcloud components update
