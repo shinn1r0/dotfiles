@@ -156,7 +156,12 @@ fi
 if [ -f "${HOME}/google-cloud-sdk/completion.zsh.inc" ]; then
     . "${HOME}/google-cloud-sdk/completion.zsh.inc"
 fi
-export GOOGLE_APPLICATION_CREDENTIALS=${HOME}/Documents/gcp/gcp.json
+export GOOGLE_APPLICATION_CREDENTIALS=${HOME}/.gcp/credentials.json
+
+# AWS CLI ==================================================
+#if [ -f "${PYEHV_ROOT}/shims/aws_zsh_completer.sh" ]; then
+    #source ${PYENV_ROOT}/shims/aws_zsh_completer.sh
+#fi
 
 # Zcompile==================================================================
 if [ ~/.zshrc -nt ~/.zshrc.zwc ]; then
