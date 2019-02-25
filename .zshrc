@@ -159,9 +159,9 @@ fi
 export GOOGLE_APPLICATION_CREDENTIALS=${HOME}/.gcp/credentials.json
 
 # AWS CLI ==================================================
-#if [ -f "${PYEHV_ROOT}/shims/aws_zsh_completer.sh" ]; then
-    #source ${PYENV_ROOT}/shims/aws_zsh_completer.sh
-#fi
+if [ -f "${PYENV_ROOT}/shims/aws_zsh_completer.sh" ]; then
+    source "$(pyenv which aws_zsh_completer.sh)"
+fi
 
 # Zcompile==================================================================
 if [ ~/.zshrc -nt ~/.zshrc.zwc ]; then
