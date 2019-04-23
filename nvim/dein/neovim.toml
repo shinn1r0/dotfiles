@@ -36,19 +36,19 @@ hook_post_source = '''
     call denite#custom#source('file_mru', 'converters', ['converter_relative_word'])
 '''
 
-[[plugins]]
-repo = 'Shougo/neosnippet.vim'
-hook_source = '''
-    imap <C-k> <Plug>(neosnippet_expand_or_jump)
-    smap <C-k> <Plug>(neosnippet_expand_or_jump)
-    xmap <C-k> <Plug>(neosnippet_expand_target)
-    if has('conceal')
-        set conceallevel=2 concealcursor=niv
-    endif
-'''
-on_i = 1
-on_ft = ['snippet']
-depends = ['neosnippet-snippets']
+#[[plugins]]
+#repo = 'Shougo/neosnippet.vim'
+#hook_source = '''
+    #imap <C-k> <Plug>(neosnippet_expand_or_jump)
+    #smap <C-k> <Plug>(neosnippet_expand_or_jump)
+    #xmap <C-k> <Plug>(neosnippet_expand_target)
+    #if has('conceal')
+        #set conceallevel=2 concealcursor=niv
+    #endif
+#'''
+#on_i = 1
+#on_ft = ['snippet']
+#depends = ['neosnippet-snippets']
 
 [[plugins]]
 repo = 'Shougo/neomru.vim'
