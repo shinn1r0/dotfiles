@@ -54,7 +54,7 @@ if command -v anyenv 1>/dev/null 2>&1; then
   eval "$(env PATH="${ANYENV_ROOT}/libexec:${PATH}" ${ANYENV_ROOT}/libexec/anyenv-init - --no-rehash zsh)"
 fi
 if command -v goenv 1>/dev/null 2>&1; then
-export GOROOT="$(goenv root)/versions/$(goenv global)"
+  export GOROOT="$(goenv root)/versions/$(goenv global)"
 fi
 
 # Zcompile==================================================================
