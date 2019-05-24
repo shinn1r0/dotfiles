@@ -17,6 +17,8 @@
     ui = auto
 [url "git@github.com:"]
     InsteadOf = github:
+[url "git@gist.github.com:"]
+    InsteadOf = gist:
 [secrets]
     providers = git secrets --aws-provider
     patterns = [A-Z0-9]{20}
