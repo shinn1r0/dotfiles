@@ -127,23 +127,25 @@ if [[ ! -n $TMUX ]]; then
 fi
 
 # Zplug=====================================================================
-source ${ZPLUG_HOME}/init.zsh
+if [ -d ${ZPLUG_HOME} ]; then
+    source ${ZPLUG_HOME}/init.zsh
 
-zplug "zsh-users/zsh-autosuggestions"
-zplug "zsh-users/zsh-completions"
-zplug "zsh-users/zsh-syntax-highlighting"
-zplug "b4b4r07/enhancd", use:init.sh
+    zplug "zsh-users/zsh-autosuggestions"
+    zplug "zsh-users/zsh-completions"
+    zplug "zsh-users/zsh-syntax-highlighting"
+    zplug "b4b4r07/enhancd", use:init.sh
 
-if [ ! ~/.zplug/last_zshrc_check_time -nt ~/.zshrc ]; then
-    touch ~/.zplug/last_zshrc_check_time
-    if ! zplug check --verbose; then
-        printf "Install? [y/N]: "
-        if read -q; then
-            echo; zplug install
+    if [ ! ~/.zplug/last_zshrc_check_time -nt ~/.zshrc ]; then
+        touch ~/.zplug/last_zshrc_check_time
+        if ! zplug check --verbose; then
+            printf "Install? [y/N]: "
+            if read -q; then
+                echo; zplug install
+            fi
         fi
     fi
+    zplug load
 fi
-zplug load
 
 # Completion====================================================================
 fpath=(~/.zsh/completion $fpath)

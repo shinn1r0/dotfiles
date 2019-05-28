@@ -44,8 +44,13 @@ export PATH=${NIM_HOME}/bin:${PATH}
 # Editor========================================================================
 export EDITOR=nvim
 export PAGER=less
-export VIM=/usr/share/nvim
-export VIMRUNTIME=/usr/share/nvim/runtime
+if [ -d "/usr/local/share/nvim" ]; then
+    export VIM=/usr/local/share/nvim
+    export VIMRUNTIME=/usr/local/share/nvim/runtime
+else
+    export VIM=/usr/share/nvim
+    export VIMRUNTIME=/usr/share/nvim/runtime
+fi
 
 # Anyenv========================================================================
 export ANYENV_ROOT=${HOME}/.anyenv

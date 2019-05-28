@@ -1,6 +1,7 @@
 #!/bin/zsh
 
 DOTPATH=$HOME/.dotfiles
+export TMUX="on"
 # apt packages
 # necessary packages
 sudo apt install -y zsh neovim tmux xsel git tree curl wget source-highlight ctags global \
@@ -30,23 +31,31 @@ fi
 if (! type trash-put &> /dev/null); then
     $DOTPATH/env/trash-cli_build.sh
 fi
-if (! type git-secrets-put &> /dev/null); then
+if (! type git-secrets &> /dev/null); then
     $DOTPATH/env/git-secrets_build.sh
 fi
-
-$DOTPATH/env/stack.sh
-cd ~/ && curl https://nim-lang.org/choosenim/init.sh -sSf | sh
-
-$DOTPATH/env/gcp-sdk.sh
-$DOTPATH/env/github_ssh.sh
+if (! type stack &> /dev/null); then
+    $DOTPATH/env/stack.sh
+fi
+if (! type choosenim &> /dev/null); then
+    cd ~/ && curl https://nim-lang.org/choosenim/init.sh -sSf | sh
+fi
+if [ ! -d ${HOME}/google-cloud-sdk ]; then
+    $DOTPATH/env/gcp-sdk.sh
+fi
+if [ ! -f ${HOME}/.ssh/github_rsa ]; then
+    $DOTPATH/env/github_ssh.sh
+fi
 
 # terminal
 cd ${HOME}
 
 ## font
 ## powerline font
-git clone https://github.com/powerline/fonts.git --depth=1 && cd fonts && ./install.sh && cd .. & rm -rf fonts
-fc-cache -vf
+if [ $(fc-list | grep Powerline | wc -l) -eq 0 ]; then
+    git clone https://github.com/powerline/fonts.git --depth=1 && cd fonts && ./install.sh && cd .. & rm -rf fonts
+    fc-cache -vf
+fi
 
 ## zplug
 if [ ! -d ${HOME}/.zplug ]; then
@@ -67,3 +76,5 @@ fi
 
 google-drive-ocamlfuse
 exec $SHELL -l
+cd ${HOME}
+unset TMUX
