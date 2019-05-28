@@ -40,3 +40,6 @@ if [ -f "${HOME}/.zshrc" ]; then
     mkdir -p ${HOME}/.zsh/completion
     curl -L https://raw.githubusercontent.com/docker/compose/${VERSION}/contrib/completion/zsh/_docker-compose > ${HOME}/.zsh/completion/_docker-compose
 fi
+
+#gVisor
+$DOTPATH/env/gvisor.sh
