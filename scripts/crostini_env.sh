@@ -2,6 +2,10 @@
 
 DOTPATH=$HOME/.dotfiles
 export TMUX="on"
+
+# gnome-terminal
+sudo apt install -y gnome-terminal
+sudo cp -r $DOTPATH/env/gnome-terminal.desktop /usr/share/applications/gnome-terminal.desktop
 # apt packages
 # necessary packages
 #sudo apt install neovim tmux
@@ -18,10 +22,15 @@ if (! type anyenv &> /dev/null); then
     $DOTPATH/env/anyenv.sh
     exec $SHELL -l
     anyenv install --init
-    $DOTPATH/env/pyenv.sh
+    $DOTPATH/env/crostini-pyenv.sh
     $DOTPATH/env/goenv.sh
+    $DOTPATH/env/nodenv.sh
     #$DOTPATH/env/rbenv.sh
-    #$DOTPATH/env/nodenv.sh
+    if (type conda &> /dev/null); then
+        if (type node &> /dev/null); then
+            $DOTPATH/env/jupyter.sh
+        fi
+    fi
 fi
 
 # build packages

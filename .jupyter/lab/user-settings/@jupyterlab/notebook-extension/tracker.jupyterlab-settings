@@ -1,0 +1,17 @@
+{
+    "codeCellConfig": {
+      "fontFamily": "Cica",
+      "fontSize": 14,
+      "lineNumbers": true
+    },
+    "markdownCellConfig": {
+      "fontFamily": "Cica",
+      "fontSize": 14,
+      "lineNumbers": true
+    },
+    "rawCellConfig": {
+      "fontFamily": "Cica",
+      "fontSize": 14,
+      "lineNumbers": true
+    }
+}
