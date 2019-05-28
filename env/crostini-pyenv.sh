@@ -1,6 +1,5 @@
 #!/bin/zsh
 
-export TMUX="on"
 # pyenv install
 if (! type anyenv &> /dev/null); then
     if [ -d "${DOTPATH}" ]; then
@@ -22,7 +21,5 @@ pip install --upgrade pip setuptools pipenv Pygments pynvim neovim-remote pytest
 DOTPATH=$HOME/.dotfiles
 ln -snfv $DOTPATH/env/flake8 $HOME/.config/flake8
 
-conda install python=3.7
+conda install python=3.7.3
 conda install pytorch-cpu torchvision-cpu -c pytorch
-
-unset TMUX

@@ -1,7 +1,6 @@
 #!/bin/zsh
 
 DOTPATH=$HOME/.dotfiles
-export TMUX="on"
 # apt packages
 # necessary packages
 sudo apt install -y zsh neovim tmux xsel git tree curl wget source-highlight ctags global \
@@ -77,4 +76,3 @@ fi
 google-drive-ocamlfuse
 exec $SHELL -l
 cd ${HOME}
-unset TMUX

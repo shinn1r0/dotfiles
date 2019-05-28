@@ -1,6 +1,5 @@
 #!/bin/zsh
 
-export TMUX="on"
 # pyenv install
 if (! type anyenv &> /dev/null); then
     if [ -d "${DOTPATH}" ]; then
@@ -21,4 +20,3 @@ pyenv rehash
 pip install --upgrade pip setuptools pipenv Pygments pynvim neovim-remote pytest flake8 mypy pylint jedi ninja awscli
 DOTPATH=$HOME/.dotfiles
 ln -snfv $DOTPATH/env/flake8 $HOME/.config/flake8
-unset TMUX

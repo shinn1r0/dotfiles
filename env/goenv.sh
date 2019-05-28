@@ -1,6 +1,5 @@
 #!/bin/zsh
 
-export TMUX="on"
 # goenv install
 if (! type anyenv &> /dev/null); then
     if [ -d "${DOTPATH}" ]; then
@@ -33,4 +32,3 @@ go get -u github.com/derekparker/delve/cmd/dlv
 go get -u github.com/nsf/gocode
 ### print where symbols are defined
 go get -u github.com/rogpeppe/godef
-unset TMUX

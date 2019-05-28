@@ -1,6 +1,5 @@
 #!/bin/zsh
 
-export TMUX="on"
 # rbenv install
 if (! type anyenv &> /dev/null); then
     if [ -d "${DOTPATH}" ]; then
@@ -20,4 +19,3 @@ rbenv rehash
 # neovim
 gem install neovim
 gem update `gem list | cut -d ' ' -f 1`
-unset TMUX

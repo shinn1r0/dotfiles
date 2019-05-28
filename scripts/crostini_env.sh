@@ -1,11 +1,7 @@
 #!/bin/zsh
 
 DOTPATH=$HOME/.dotfiles
-export TMUX="on"
 
-# gnome-terminal
-sudo apt install -y gnome-terminal
-sudo cp -r $DOTPATH/env/gnome-terminal.desktop /usr/share/applications/gnome-terminal.desktop
 # apt packages
 # necessary packages
 #sudo apt install neovim tmux
@@ -42,9 +38,9 @@ fi
 if (! type git-secrets &> /dev/null); then
     $DOTPATH/env/git-secrets_build.sh
 fi
-if (! type stack &> /dev/null); then
-    $DOTPATH/env/stack.sh
-fi
+#if (! type stack &> /dev/null); then
+    #$DOTPATH/env/stack.sh
+#fi
 if (! type choosenim &> /dev/null); then
     cd ~/ && curl https://nim-lang.org/choosenim/init.sh -sSf | sh
 fi
@@ -80,4 +76,3 @@ fi
 
 exec $SHELL -l
 cd ${HOME}
-unset TMUX

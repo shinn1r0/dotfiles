@@ -1,6 +1,5 @@
 #!/bin/zsh
 
-export TMUX="on"
 # ndenv install
 if (! type anyenv &> /dev/null); then
     if [ -d "${DOTPATH}" ]; then
@@ -19,4 +18,3 @@ nodenv global ${VERSION}
 nodenv rehash
 
 npm install -g npm neovim
-unset TMUX

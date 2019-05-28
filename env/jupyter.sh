@@ -1,6 +1,5 @@
 #!/bin/zsh
 
-export TMUX="on"
 # pip install
 pip install ipyparallel jupyter jupyterlab jupyter-contrib-nbextensions jupyter-nbextensions-configurator jupyterthemes
 pip install isort autopep8
@@ -70,5 +69,3 @@ jupyter serverextension enable --py jupyterlab_git
 jupyter serverextension enable --py jupyterlab_templates
 jupyter serverextension enable --py jupyterlab_code_formatter
 jupyter serverextension enable --py nbdime --sys-prefix
-
-unset TMUX
