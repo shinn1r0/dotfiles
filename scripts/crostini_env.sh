@@ -9,7 +9,7 @@ sudo cp -r $DOTPATH/env/gnome-terminal.desktop /usr/share/applications/gnome-ter
 # apt packages
 # necessary packages
 #sudo apt install neovim tmux
-sudo apt install -y zsh vim xsel git tree curl wget source-highlight ctags global software-properties-common
+sudo apt install -y zsh vim xsel git tree curl wget source-highlight ctags global software-properties-common ncdu
 # build packages
 sudo apt install -y checkinstall make build-essential llvm
 # gnome utility packages
