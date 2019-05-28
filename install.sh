@@ -4,7 +4,7 @@ DOTPATH=$HOME/.dotfiles
 
 if [ ! -d "${DOTPATH}" ]; then
     if (type git &> /dev/null); then
-        git clone https://github.com/shinichir0/dotfiles.git
+        git clone https://github.com/shinichir0/dotfiles.git ${DOTPATH}
     elif (type curl &> /dev/null) || (type wget &> /dev/null); then
         TARBALL="https://github.com/shinichir0/dotfiles/archive/master.tar.gz"
         if (type curl &> /dev/null); then
