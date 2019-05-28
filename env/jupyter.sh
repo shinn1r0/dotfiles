@@ -17,7 +17,7 @@ jt -t onedork -vim -T -N -ofs 11 -f hack -tfs 11 -cellw 95%
 cat ${HOME}/.ipython/profile_default/ipython_config.py | sed -e "s/#c.InteractiveShellApp.exec_lines = \[\]/c.InteractiveShellApp.exec_lines = \['%matplotlib widget'\]/g" | tee ${HOME}/.ipython/profile_default/ipython_config.py
 
 # jupyter notebook extension
-sudo ipcluster nbextension enable
+ipcluster nbextension enable
 jupyter nbextension enable toggle_all_line_numbers/main
 jupyter nbextension enable code_prettify/code_prettify
 jupyter nbextension enable code_prettify/isort
