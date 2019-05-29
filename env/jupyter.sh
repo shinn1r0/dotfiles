@@ -95,3 +95,4 @@ jupyter serverextension enable --py nbdime --sys-prefix
 
 # jupyter server extension
 mkdir -p ~/jupyter
+mkdir -p ~/jupyter/templates

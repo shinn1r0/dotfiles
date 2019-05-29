@@ -763,6 +763,6 @@ c.NotebookApp.port = 8888
 #  
 #  By default, all installed kernels are allowed.
 #c.KernelSpecManager.whitelist = set()
-c.JupyterLabTemplates.template_dirs = ['template']
+c.JupyterLabTemplates.template_dirs = ['templates']
 c.JupyterLabTemplates.include_default = True
 c.LatexConfig.latex_command = 'pdflatex'
