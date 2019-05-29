@@ -7,7 +7,7 @@ git clone https://github.com/neovim/neovim.git
 cd neovim
 
 if (! type nvim &> /dev/null); then
-    git checkout $(git tag | grep -E "^v[0-9]*\.[0-9]*\.[0-9]*$" | sort -V | tail -n 1)
+    git checkout stable
     make CMAKE_BUILD_TYPE=RelWithDebInfo
     sudo make install
 else
@@ -17,7 +17,7 @@ else
     if [ $NVIM_NOW_VERSION = $NVIM_NEW_VERSION ]; then
         echo "installed latest version"
     else
-        git checkout $NVIM_NEW_VERSION
+        git checkout stable
         make CMAKE_BUILD_TYPE=RelWithDebInfo
         sudo make install
     fi
