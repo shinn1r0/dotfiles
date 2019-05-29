@@ -20,6 +20,7 @@ if (! type conda &> /dev/null); then
     ln -snfv $DOTPATH/env/flake8 $HOME/.config/flake8
 
     conda install python=3.7.3
+    conda install -c conda-forge awscli
     conda install pytorch-cpu torchvision-cpu -c pytorch
 fi
 
