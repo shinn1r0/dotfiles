@@ -69,3 +69,6 @@ jupyter serverextension enable --py jupyterlab_git
 jupyter serverextension enable --py jupyterlab_templates
 jupyter serverextension enable --py jupyterlab_code_formatter
 jupyter serverextension enable --py nbdime --sys-prefix
+
+# jupyter server extension
+mkdir -p ~/jupyter
