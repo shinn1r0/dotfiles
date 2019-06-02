@@ -46,7 +46,7 @@ if (type anyenv &> /dev/null); then
 fi
 
 # update pip packages
-if (type pyinit &> /dev/null); then
+if (type pip &> /dev/null); then
     echo "pip packages update============================================"
     pyinit
     #pip list --outdated --format=columns | tail -n +3 | awk '{print $1}' | xargs pip install -U 2>/dev/null || echo "No pip Packages to Update"
