@@ -33,6 +33,9 @@ fi
 if (! type git-secrets &> /dev/null); then
     $DOTPATH/env/git-secrets_build.sh
 fi
+if (! type hub &> /dev/null); then
+    $DOTPATH/env/hub_build.sh
+fi
 if (! type stack &> /dev/null); then
     $DOTPATH/env/stack.sh
 fi
