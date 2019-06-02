@@ -149,11 +149,17 @@ if [ -d ${ZPLUG_HOME} ]; then
 fi
 
 # Completion====================================================================
-fpath=(~/.zsh/completion $fpath)
+fpath=($HOME/.zsh/completions $fpath)
+autoload -U compinit && compinit
 
 # Pipenv====================================================
 if (type pipenv &> /dev/null); then
     eval "$(pipenv --completion)"
+fi
+
+# Hub=======================================================
+if (type hub &> /dev/null); then
+    eval "$(hub alias -s)"
 fi
 
 # Google Cloud SDK==========================================
