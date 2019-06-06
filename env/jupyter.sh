@@ -19,9 +19,9 @@ if (! type conda &> /dev/null); then
     DOTPATH=$HOME/.dotfiles
     ln -snfv $DOTPATH/env/flake8 $HOME/.config/flake8
 
-    conda install python=3.7.3
-    conda install -c conda-forge awscli
-    conda install pytorch-cpu torchvision-cpu -c pytorch
+    conda install -y python=3.7.3
+    conda install -y -c conda-forge awscli
+    conda install -y pytorch-cpu torchvision-cpu -c pytorch
 fi
 
 # pip install
