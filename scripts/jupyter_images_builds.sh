@@ -12,21 +12,17 @@ build_images () {
     fi
     cd $1
     git pull
-    docker build --no-cache -t shinn1r0/$1 .
-    docker push shinn1r0/$1
+    docker-compose build --no-cache
+    docker-compose push
 }
 
 echo "build mode ${1:=gpu}"
 
 if [ $1 = "gpu" ]; then
     build_images jupyterlab-gpu
-    build_images jupyter-deep-gpu
 elif [ $1 = "cpu" ]; then
     build_images jupyterlab
-    build_images jupyter-deep
 elif [ $1 = "all" ]; then
     build_images jupyterlab
     build_images jupyterlab-gpu
-    build_images jupyter-deep
-    build_images jupyter-deep-gpu
 fi
