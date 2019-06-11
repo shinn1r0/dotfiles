@@ -69,7 +69,7 @@ if (type trash-put &> /dev/null); then
     alias rm=trash-put
 fi
 
- Dictionary================================================================
+# Dictionary================================================================
 function dict() {
     grep $1 ${DOTPATH}/dict/gene.txt -E -A 1 -wi --color=always | less -FX
 }
