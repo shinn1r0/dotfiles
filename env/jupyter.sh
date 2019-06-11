@@ -28,7 +28,7 @@ fi
 pip install ipyparallel jupyter jupyterlab jupyter-contrib-nbextensions jupyter-nbextensions-configurator jupyterthemes
 pip install isort autopep8
 pip install ipywidgets ipympl nbdime
-pip install jupyterlab_code_formatter jupyterlab-git jupyterlab_templates jupyterlab_code_formatter jupyterlab_latex
+pip install jupyterlab_code_formatter jupyterlab-git jupyterlab_templates jupyterlab_latex
 
 # jupyter notebook settings
 ipython profile create
@@ -80,9 +80,7 @@ jupyter nbextension enable --py --sys-prefix widgetsnbextension
 jupyter labextension install jupyterlab_voyager
 jupyter labextension install @krassowski/jupyterlab_go_to_definition
 jupyter labextension install jupyterlab_templates
-jupyter labextension install @jupyter-widgets/jupyterlab-manager
 jupyter labextension install jupyter-matplotlib
-jupyter labextension install @ryantam626/jupyterlab_code_formatter
 jupyter labextension install @jupyterlab/katex-extension
 jupyter labextension install @jupyterlab/latex
 jupyter labextension install jupyterlab-drawio
@@ -91,7 +89,6 @@ jupyter labextension install jupyterlab-drawio
 jupyter serverextension enable --py jupyterlab_code_formatter
 jupyter serverextension enable --py jupyterlab_git
 jupyter serverextension enable --py jupyterlab_templates
-jupyter serverextension enable --py jupyterlab_code_formatter
 jupyter serverextension enable --py nbdime --sys-prefix
 
 # jupyter server extension
