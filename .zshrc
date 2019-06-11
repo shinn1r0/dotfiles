@@ -24,28 +24,6 @@ precmd () {
 }
 [ -f ~/.fzf.zsh ] && source ~/.fzf.zsh
 
-# Alias=====================================================================
-alias ls='ls --color'
-alias la='ls -a'
-alias ll='ls -l'
-alias vi='VIM=/usr/share/vim VIMRUNTIME=/usr/share/vim/vim80 vi'
-alias vim='nvim'
-alias svim='sudoedit'
-alias py='python'
-alias ipy='ipython'
-alias pyinit='pip install --upgrade pip setuptools pipenv Pygments pynvim neovim-remote pytest flake8 mypy pylint jedi ninja'
-alias pbcopy='xsel --clipboard --input'
-alias pbpaste='xsel --clipboard --output'
-alias gip='curl inet-ip.info'
-alias jupy='cd ${HOME}/jupyter && jupyter lab'
-alias op='xdg-open'
-alias btup='pactl load-module module-bluetooth-discover'
-alias googledrive='fusermount -u $GOOGLEDRIVE && google-drive-ocamlfuse $GOOGLEDRIVE'
-alias update='up.sh'
-if (type trash-put &> /dev/null); then
-    alias rm=trash-put
-fi
-
 # Export====================================================================
 export DOTPATH=${HOME}/.dotfiles
 export DOTS=${HOME}/.dotfiles
@@ -69,7 +47,29 @@ export SHELL=/usr/bin/zsh
 export LANG='en_US.UTF-8'
 export LC_ALL='en_US.UTF-8'
 
-# Dictionary================================================================
+## Alias=====================================================================
+alias ls='ls --color'
+alias la='ls -a'
+alias ll='ls -l'
+alias vi='VIM=/usr/share/vim VIMRUNTIME=/usr/share/vim/vim80 vi'
+alias vim='nvim'
+alias svim='sudoedit'
+alias py='python'
+alias ipy='ipython'
+alias pyinit='pip install --upgrade pip setuptools pipenv Pygments pynvim neovim-remote pytest flake8 mypy pylint jedi ninja'
+alias pbcopy='xsel --clipboard --input'
+alias pbpaste='xsel --clipboard --output'
+alias gip='curl inet-ip.info'
+alias jupy='cd ${HOME}/jupyter && jupyter lab'
+alias op='xdg-open'
+alias btup='pactl load-module module-bluetooth-discover'
+alias googledrive='fusermount -u $GOOGLEDRIVE && google-drive-ocamlfuse $GOOGLEDRIVE'
+alias update='up.sh'
+if (type trash-put &> /dev/null); then
+    alias rm=trash-put
+fi
+
+ Dictionary================================================================
 function dict() {
     grep $1 ${DOTPATH}/dict/gene.txt -E -A 1 -wi --color=always | less -FX
 }
