@@ -12,6 +12,7 @@ pull_images () {
     fi
     cd $1
     git pull
+    docker-compose pull
 }
 
 echo "pull mode ${1:=gpu}"
