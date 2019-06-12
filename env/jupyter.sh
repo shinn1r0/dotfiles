@@ -114,7 +114,7 @@ jupyter labextension install jupyterlab-drawio
 jupyter serverextension enable --py jupyterlab_code_formatter
 jupyter serverextension enable --py jupyterlab_git
 jupyter serverextension enable --py jupyterlab_templates
-jupyter serverextension enable --py nbdime --sys-prefix
+nbdime extensions --enable --system
 
 # jupyter server extension
 mkdir -p ~/jupyter
