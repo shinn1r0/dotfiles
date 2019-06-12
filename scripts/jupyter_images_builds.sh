@@ -14,12 +14,10 @@ build_images () {
     git pull
     if [ $2 = "cache" ]; then
         docker-compose build
-        docker-slim build --http-probe-ports 8888 shinn1r0/$1
-        docker push shinn1r0/$1.slim
+        docker-compose push
     elif [ $2 = "no-cache" ]; then
         docker-compose build --no-cache
-        docker-slim build --http-probe-ports 8888 shinn1r0/$1
-        docker push shinn1r0/$1.slim
+        docker-compose push
     fi
 }
 
