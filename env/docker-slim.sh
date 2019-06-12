@@ -13,7 +13,7 @@ curl -OL "https://downloads.dockerslim.com/releases/${VERSION}/dist_linux.tar.gz
 tar xzf dist_linux.tar.gz
 rm dist_linux.tar.gz
 cd ${SCRIPT_DIR}/dist_linux
-sudo mv * /usr/local/bin/
+mv * ${HOME}/.local/bin/
 cd ${SCRIPT_DIR}
 rmdir dist_linux
 docker-slim version
