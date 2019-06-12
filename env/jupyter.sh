@@ -101,7 +101,7 @@ jupyter labextension install @ryantam626/jupyterlab_code_formatter
 jupyter labextension install jupyterlab_tensorboard
 jupyter labextension install @jupyterlab/git
 jupyter labextension install @jupyter-widgets/jupyterlab-manager
-jupyter nbextension enable --py --sys-prefix widgetsnbextension
+jupyter nbextension enable --py --user widgetsnbextension
 jupyter labextension install jupyterlab_voyager
 jupyter labextension install @krassowski/jupyterlab_go_to_definition
 jupyter labextension install jupyterlab_templates
@@ -114,7 +114,7 @@ jupyter labextension install jupyterlab-drawio
 jupyter serverextension enable --py jupyterlab_code_formatter
 jupyter serverextension enable --py jupyterlab_git
 jupyter serverextension enable --py jupyterlab_templates
-nbdime extensions --enable --system
+nbdime extensions --enable --user
 
 # jupyter server extension
 mkdir -p ~/jupyter
