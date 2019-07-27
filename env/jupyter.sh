@@ -1,6 +1,6 @@
 #!/bin/zsh
 
-python_version="3.7.4"
+python_version="3.7.3"
 cica_version="v5.0.1"
 
 if (! type conda &> /dev/null); then
@@ -45,17 +45,17 @@ jupyterlab_code_formatter jupyterlab-git jupyterlab_templates jupyterlab_latex j
 rm -rf ${HOME}/.cache/pip
 
 # jupyter font settings
-apt-get install curl unzip -y
-mkdir -p /usr/share/fonts/opentype/noto
+sudo apt-get install curl unzip -y
+sudo mkdir -p /usr/share/fonts/opentype/noto
 curl -O https://noto-website-2.storage.googleapis.com/pkgs/NotoSansCJKjp-hinted.zip
-unzip NotoSansCJKjp-hinted.zip -d /usr/share/fonts/opentype/noto
+sudo unzip NotoSansCJKjp-hinted.zip -d /usr/share/fonts/opentype/noto
 rm NotoSansCJKjp-hinted.zip
-mkdir -p /usr/share/fonts/opentype/cica
+sudo mkdir -p /usr/share/fonts/opentype/cica
 curl -LO https://github.com/miiton/Cica/releases/download/${cica_version}/Cica_${cica_version}.zip
-unzip Cica_${cica_version}.zip -d /usr/share/fonts/opentype/cica
-rm Cica_${cica_version}.zip
-apt-get install fontconfig
-fc-cache -f
+sudo unzip Cica_${cica_version}.zip -d /usr/share/fonts/opentype/cica
+sudo rm Cica_${cica_version}.zip
+sudo apt-get install fontconfig
+sudo fc-cache -f
 echo "\nfont.family: Noto Sans CJK JP" >> $(python -c 'import matplotlib as m; print(m.matplotlib_fname())') && rm -f ~/.cache/matplotlib/font*
 
 # jupyter settings
