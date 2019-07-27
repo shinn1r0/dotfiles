@@ -51,9 +51,9 @@ curl -O https://noto-website-2.storage.googleapis.com/pkgs/NotoSansCJKjp-hinted.
 sudo unzip NotoSansCJKjp-hinted.zip -d /usr/share/fonts/opentype/noto
 rm NotoSansCJKjp-hinted.zip
 sudo mkdir -p /usr/share/fonts/opentype/cica
-curl -LO https://github.com/miiton/Cica/releases/download/${cica_version}/Cica_${cica_version}.zip
-sudo unzip Cica_${cica_version}.zip -d /usr/share/fonts/opentype/cica
-sudo rm Cica_${cica_version}.zip
+curl -LO https://github.com/miiton/Cica/releases/download/${cica_version}/Cica_${cica_version}_with_emoji.zip
+sudo unzip Cica_${cica_version}_with_emoji.zip -d /usr/share/fonts/opentype/cica
+sudo rm Cica_${cica_version}_with_emoji.zip
 sudo apt-get install fontconfig
 sudo fc-cache -f
 echo "\nfont.family: Noto Sans CJK JP" >> $(python -c 'import matplotlib as m; print(m.matplotlib_fname())') && rm -f ~/.cache/matplotlib/font*
