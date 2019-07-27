@@ -50,8 +50,9 @@ if (type pip &> /dev/null); then
     echo "pip packages update============================================"
     has_conda=$(pyenv version | grep anaconda | wc -l)
     if [ ${has_conda} = 1 ]; then
-        pip install --upgrade pip setuptools pipenv Pygments pynvim neovim-remote pytest flake8 mypy pylint jedi ninja
+        pip install --upgrade pip setuptools pipenv kaggle
         conda update --all -y
+        conda clean --all -y
     else
         pip list --outdated --format=columns | tail -n +3 | awk '{print $1}' | xargs pip install -U 2>/dev/null || echo "No pip Packages to Update"
     fi
