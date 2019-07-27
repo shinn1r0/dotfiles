@@ -1,7 +1,7 @@
 #!/bin/zsh
 
-python_version="3.7.3"
-cica_version="v4.1.2"
+python_version="3.7.4"
+cica_version="v5.0.1"
 
 if (! type conda &> /dev/null); then
     if (! type anyenv &> /dev/null); then
@@ -17,30 +17,34 @@ if (! type conda &> /dev/null); then
     fi
 
     # python install
-    VERSION=$(pyenv install -l | grep -E "^  anaconda3.*$" | sort -V | tail -n 1 | awk '{print $1}')
-    pyenv install ${VERSION}
-    pyenv global ${VERSION}
+    pyenv install miniconda-latest
+    pyenv global miniconda-latest
     pyenv rehash
     # requirements
-    pip install --upgrade pip setuptools pipenv Pygments pynvim neovim-remote pytest flake8 mypy pylint jedi ninja awscli
     DOTPATH=$HOME/.dotfiles
     ln -snfv $DOTPATH/env/flake8 $HOME/.config/flake8
-
-    conda install -y python=${python_version}
-    conda install -y -c conda-forge awscli
-    conda install -y pytorch-cpu torchvision-cpu -c pytorch
 fi
 
-# pip install
-conda install -y ipyparallel jupyter_contrib_nbextensions jupyter_nbextensions_configurator jupyterthemes -c conda-forge
-conda install -y autopep8 ipympl nbdime -c conda-forge
-conda install -y pillow pyspark -c conda-forge
+# conda install
+conda config --append channels conda-forge
+conda config --add channels pytorch
+conda install -y python=${python_version} \
+awscli pynvim pytest Pygments \
+numpy scipy numba pandas dask matplotlib numexpr \
+scikit-learn scikit-image bokeh pillow accimage pyspark xlrd sympy altair \
+ipython ipyparallel ipywidgets ipympl \
+jupyter jupyterlab nbdime nbconvert nbformat \
+beautifulsoup4 lxml jinja2 sphinx \
+isort pep8 autopep8 flake8 pyflakes pylint jedi tqdm \
+tensorboard pytorch-cpu torchvision-cpu
 conda update --all -y
-pip install -U kaggle tb-nightly
-pip install -U jupyter_http_over_ws && jupyter serverextension enable --py jupyter_http_over_ws
-pip install -U jupyterlab_code_formatter jupyterlab-git jupyterlab_templates jupyterlab_latex
+conda clean --all
+# pip install
+pip install -U pip setuptools pipenv kaggle \
+jupyterlab_code_formatter jupyterlab-git jupyterlab_templates jupyterlab_latex jupyter-tensorboard
+rm -rf ${HOME}/.cache/pip
 
-# jupyter notebook settings
+# jupyter font settings
 apt-get install curl unzip -y
 mkdir -p /usr/share/fonts/opentype/noto
 curl -O https://noto-website-2.storage.googleapis.com/pkgs/NotoSansCJKjp-hinted.zip
@@ -52,69 +56,31 @@ unzip Cica_${cica_version}.zip -d /usr/share/fonts/opentype/cica
 rm Cica_${cica_version}.zip
 apt-get install fontconfig
 fc-cache -f
-echo "\nfont.family: Noto Sans CJK JP" >> $(python -c 'import matplotlib as m; print(m.matplotlib_fname())') \
+echo "\nfont.family: Noto Sans CJK JP" >> $(python -c 'import matplotlib as m; print(m.matplotlib_fname())') && rm -f ~/.cache/matplotlib/font*
 
-# jupyter notebook settings
+# jupyter settings
 ipython profile create
-jupyter contrib nbextension install --user
-jupyter nbextensions_configurator enable --user
-mkdir -p $(jupyter --data-dir)/nbextensions
-git clone https://github.com/lambdalisue/jupyter-vim-binding $(jupyter --data-dir)/nbextensions/vim_binding
-jupyter nbextension enable vim_binding/vim_binding
-jt -t onedork -vim -T -N -ofs 11 -f hack -tfs 11 -cellw 95%
-
 cat ${HOME}/.ipython/profile_default/ipython_config.py | sed -e "s/#c.InteractiveShellApp.exec_lines = \[\]/c.InteractiveShellApp.exec_lines = \['%matplotlib widget'\]/g" | tee ${HOME}/.ipython/profile_default/ipython_config.py
-
-# jupyter notebook extension
-ipcluster nbextension enable
-jupyter nbextension enable toggle_all_line_numbers/main
-jupyter nbextension enable code_prettify/code_prettify
-jupyter nbextension enable code_prettify/isort
-jupyter nbextension enable code_prettify/autopep8
-jupyter nbextension enable livemdpreview/livemdpreview
-jupyter nbextension enable codefolding/main
-jupyter nbextension enable execute_time/ExecuteTime
-jupyter nbextension disable hinterland/hinterland
-jupyter nbextension enable toc2/main
-jupyter nbextension enable varInspector/main
-jupyter nbextension enable ruler/main
-jupyter nbextension enable latex_envs/latex_envs
-jupyter nbextension enable comment-uncomment/main
-jupyter nbextension enable scratchpad/main
-jupyter nbextension enable gist_it/main
-jupyter nbextension enable keyboard_shortcut_editor/main
-jupyter nbextension enable hide_input/main
-jupyter nbextension enable hide_input_all/main
-jupyter nbextension enable table_beautifier/main
-jupyter nbextension enable equation-numbering/main
-jupyter nbextension enable highlight_selected_word/main
-jupyter nbextension enable freeze/main
-jupyter nbextension enable snippets/main
-jupyter nbextension enable snippets_menu/main
-jupyter nbextension enable vim_binding/vim_binding
 
 # jupyterlab extension
 jupyter labextension install jupyterlab_vim
+jupyter labextension install @jupyterlab/git
 jupyter labextension install @lckr/jupyterlab_variableinspector
+jupyter labextension install @krassowski/jupyterlab_go_to_definition
+jupyter labextension install @jupyter-widgets/jupyterlab-manager
+jupyter labextension install jupyter-matplotlib
+#jupyter labextension install jupyterlab_voyager
 jupyter labextension install @jupyterlab/toc
 jupyter labextension install @ryantam626/jupyterlab_code_formatter
 jupyter labextension install jupyterlab_tensorboard
-jupyter labextension install @jupyterlab/git
-jupyter labextension install @jupyter-widgets/jupyterlab-manager
-jupyter nbextension enable --py --user widgetsnbextension
-jupyter labextension install jupyterlab_voyager
-jupyter labextension install @krassowski/jupyterlab_go_to_definition
 jupyter labextension install jupyterlab_templates
-jupyter labextension install jupyter-matplotlib
-jupyter labextension install @jupyterlab/katex-extension
 jupyter labextension install @jupyterlab/latex
+jupyter labextension install @jupyterlab/katex-extension
 jupyter labextension install jupyterlab-drawio
-
-# jupyter server extension
-jupyter serverextension enable --py jupyterlab_code_formatter
 jupyter serverextension enable --py jupyterlab_git
+jupyter serverextension enable --py jupyterlab_code_formatter
 jupyter serverextension enable --py jupyterlab_templates
-nbdime extensions --enable --user
+nbdime extensions --enable
 
 # jupyter server extension
 mkdir -p ~/jupyter
