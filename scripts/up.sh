@@ -48,9 +48,9 @@ fi
 # update pip packages
 if (type pip &> /dev/null); then
     echo "pip packages update============================================"
-    has_conda=$(pyenv version | grep anaconda | wc -l)
+    has_conda=$(pyenv version | grep conda | wc -l)
     if [ ${has_conda} = 1 ]; then
-        pip install --upgrade pip setuptools pipenv kaggle
+        pip install -U pip setuptools pipenv kaggle
         conda update --all -y
         conda clean --all -y
     else
