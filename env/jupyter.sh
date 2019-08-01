@@ -17,8 +17,8 @@ if (! type conda &> /dev/null); then
     fi
 
     # python install
-    pyenv install miniconda-latest
-    pyenv global miniconda-latest
+    pyenv install miniconda3-latest
+    pyenv global miniconda3-latest
     pyenv rehash
     # requirements
     DOTPATH=$HOME/.dotfiles
