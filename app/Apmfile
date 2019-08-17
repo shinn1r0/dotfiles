@@ -5,7 +5,7 @@ autocomplete-paths@2.12.2
 autocomplete-python@1.14.1
 busy-signal@2.0.1
 ex-mode@0.18.0
-file-icons@2.1.33
+file-icons@2.1.34
 git-plus@8.7.1
 go-plus@6.1.0
 godef@0.2.5
@@ -15,7 +15,7 @@ intentions@1.1.5
 language-latex@1.2.0
 language-markdown@0.37.0
 latex@0.50.2
-linter@2.3.0
+linter@2.3.1
 linter-ui-default@1.7.1
 markdown-preview-enhanced@0.16.3
 markdown-writer@2.11.7
@@ -29,9 +29,9 @@ minimap-selection@4.5.0
 nim@0.4.1
 open-recent@5.0.0
 pdf-view@0.71.0
-platformio-ide-terminal@2.9.3
+platformio-ide-terminal@2.9.4
 project-manager@3.3.7
 show-ideographic-space@1.0.2
-vim-mode-plus@1.36.0
+vim-mode-plus@1.36.1
 wordcount@3.1.0
 
