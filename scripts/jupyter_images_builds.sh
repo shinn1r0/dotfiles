@@ -31,3 +31,5 @@ elif [ $1 = "all" ]; then
     build_images jupyterlab-gpu $2
     build_images jupyterlab $2
 fi
+
+docker system prune

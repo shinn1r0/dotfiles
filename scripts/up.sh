@@ -59,6 +59,11 @@ if (type pip &> /dev/null); then
     #pip check
 fi
 
+# docker system prune
+if (type docker &> /dev/null); then
+    docker system prune
+fi
+
 # update gem packages
 #if (type gem &> /dev/null); then
     #echo "gem packages update============================================"

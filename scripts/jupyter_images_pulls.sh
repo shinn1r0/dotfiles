@@ -22,3 +22,5 @@ if [ $1 = "gpu" ]; then
 elif [ $1 = "cpu" ]; then
     pull_images jupyterlab
 fi
+
+docker system prune
