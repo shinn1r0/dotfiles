@@ -61,7 +61,7 @@ fi
 
 # docker system prune
 if (type docker &> /dev/null); then
-    docker system prune
+    docker system prune -f
 fi
 
 # update gem packages
