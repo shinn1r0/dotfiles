@@ -32,4 +32,4 @@ elif [ $1 = "all" ]; then
     build_images jupyterlab $2
 fi
 
-docker system prune
+docker system prune -f
