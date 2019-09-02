@@ -38,7 +38,7 @@ beautifulsoup4 lxml jinja2 sphinx \
 isort pep8 autopep8 flake8 pyflakes pylint jedi tqdm \
 tensorboard pytorch torchvision cudatoolkit=10.0
 conda update --all -y
-conda clean --all
+conda clean --all -y
 # pip install
 pip install -U pip setuptools pipenv kaggle \
 jupyterlab_code_formatter jupyterlab-git jupyterlab_templates jupyterlab_latex jupyter-tensorboard
