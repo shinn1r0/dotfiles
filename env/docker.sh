@@ -37,8 +37,8 @@ sudo chmod +x /usr/local/bin/docker-compose
 docker-compose --version
 
 if [ -f "${HOME}/.zshrc" ]; then
-    mkdir -p ${HOME}/.zsh/completion
-    curl -L https://raw.githubusercontent.com/docker/compose/${VERSION}/contrib/completion/zsh/_docker-compose > ${HOME}/.zsh/completion/_docker-compose
+    mkdir -p ${HOME}/.zsh/completions
+    curl -L https://raw.githubusercontent.com/docker/compose/${VERSION}/contrib/completion/zsh/_docker-compose > ${HOME}/.zsh/completions/_docker-compose
 fi
 
 if (! type docker-slim &> /dev/null); then
