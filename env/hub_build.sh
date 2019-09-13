@@ -11,6 +11,6 @@ git clone \
   https://github.com/github/hub.git
 
 cd hub
-make install prefix=/usr/local
+make install prefix=$HOME/.local
 
 rm -rf hub
