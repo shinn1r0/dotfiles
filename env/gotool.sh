@@ -1,5 +1,9 @@
 #!/bin/zsh
 
+if (! type go &> /dev/null); then
+    $DOTPATH/env/goenv.sh
+fi
+
 # golang dev tool
 ## dependency management tool
 go get -u github.com/golang/dep/cmd/dep
