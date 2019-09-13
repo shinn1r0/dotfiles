@@ -17,5 +17,8 @@ git clone \
 cd hub
 make install prefix=$HOME/.local
 
+mkdir -p $HOME/.zsh/completions 2>/dev/null
+cp etc/hub.zsh_completion $HOME/.zsh/completions/_hub
+
 cd $SCRIPT_DIR
 rm -rf hub
