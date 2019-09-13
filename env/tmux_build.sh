@@ -1,6 +1,7 @@
 #!/bin/zsh
 
-sudo apt install automake libevent-dev libncurses5-dev xsel
+sudo apt install autoconf automake pkg-config\
+    libevent-dev libncurses5-dev xsel byacc flex
 
 git clone https://github.com/tmux/tmux.git
 cd tmux
