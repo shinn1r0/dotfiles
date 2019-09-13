@@ -3,6 +3,9 @@
 sudo apt install autoconf automake pkg-config\
     libevent-dev libncurses5-dev xsel byacc flex
 
+SCRIPT_DIR=$(cd $(dirname $0); pwd)
+cd $SCRIPT_DIR
+
 git clone https://github.com/tmux/tmux.git
 cd tmux
 
@@ -21,5 +24,5 @@ else
 
     sudo make install
 fi
-cd ..
+cd $SCRIPT_DIR
 rm -rf tmux

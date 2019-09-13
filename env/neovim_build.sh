@@ -2,6 +2,10 @@
 
 sudo apt install ninja-build gettext libtool libtool-bin autoconf automake cmake g++ pkg-config unzip
 pip install ninja
+
+SCRIPT_DIR=$(cd $(dirname $0); pwd)
+cd $SCRIPT_DIR
+
 git clone https://github.com/neovim/neovim.git
 
 cd neovim
@@ -22,5 +26,5 @@ else
         sudo make install
     fi
 fi
-cd ..
+cd $SCRIPT_DIR
 sudo rm -rf neovim
