@@ -1,5 +1,5 @@
 # dotfiles
-`zsh -c "$(curl -fsSL dot.shinichironaito.com)"`
+`zsh -c "$(curl -fsSL dot.shinichiro.dev)"`
 
 ## install.sh
 make symbolic links of dotfiles
@@ -62,7 +62,7 @@ my dictionary
 - gcp_sdk
 
 ## env files
-`curl -fsSL dots.shinichironaito.com/env/xxx.sh`
+`curl -fsSL dots.shinichiro.dev/env/xxx.sh`
 - anyenv.sh
 - pyenv.sh
 - goenv.sh
