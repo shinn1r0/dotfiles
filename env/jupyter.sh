@@ -35,7 +35,7 @@ scikit-learn scikit-image bokeh pillow accimage pyspark xlrd sympy altair \
 ipython ipyparallel ipywidgets ipympl \
 jupyter jupyterlab nbdime nbconvert nbformat \
 beautifulsoup4 lxml jinja2 sphinx \
-isort pep8 autopep8 flake8 pyflakes pylint jedi tqdm \
+isort pep8 autopep8 flake8 pyflakes pylint jedi tqdm csvkit\
 tensorboard pytorch-cpu torchvision-cpu
 conda update --all -y
 conda clean --all
