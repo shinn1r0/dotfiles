@@ -68,7 +68,7 @@ let g:onedark_terminal_italics = 1
 
 "" Vimfiles
 set directory=$HOME/.config/nvim/vimfiles/swap
-set backupdir=$HOME/.config/nvim/vimfiles/back
+set backupdir=$HOME/.config/nvim/vimfiles/backup
 set undodir=$HOME/.config/nvim/vimfiles/undo
 set viminfo+=n$HOME/.config/nvim/vimfiles/viminfo
 
