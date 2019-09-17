@@ -67,10 +67,10 @@ let g:onedark_termcolors = 256
 let g:onedark_terminal_italics = 1
 
 "" Vimfiles
-set directory=$XDG_CONFIG_HOME/nvim/vimfiles/swap
-set backupdir=$XDG_CONFIG_HOME/nvim/vimfiles/backup
-set undodir=$XDG_CONFIG_HOME/nvim/vimfiles/undo
-set viminfo+=n$XDG_CONFIG_HOME/nvim/vimfiles/viminfo
+set directory=$HOME/.config/nvim/vimfiles/swap
+set backupdir=$HOME/.config/nvim/vimfiles/back
+set undodir=$HOME/.config/nvim/vimfiles/undo
+set viminfo+=n$HOME/.config/nvim/vimfiles/viminfo
 
 "" Langage
 if has("multi_lang")
