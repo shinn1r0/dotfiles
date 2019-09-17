@@ -37,14 +37,14 @@ mkdir -p $HOME/.local/bin 2> /dev/null
 mkdir -p $HOME/.local/share 2> /dev/null
 mkdir -p $HOME/.ssh 2> /dev/null
 
-mkdir -p $DOTPATH/nvim/vimfiles/swap 2>/dev/null
-mkdir -p $DOTPATH/nvim/vimfiles/backup 2>/dev/null
-mkdir -p $DOTPATH/nvim/vimfiles/undo 2>/dev/null
-ln -snfv $DOTPATH/nvim $HOME/.config/nvim
-ln -snfv $DOTPATH/hub $HOME/.config/hub
+mkdir -p $DOTPATH/.nvim/vimfiles/swap 2>/dev/null
+mkdir -p $DOTPATH/.nvim/vimfiles/backup 2>/dev/null
+mkdir -p $DOTPATH/.nvim/vimfiles/undo 2>/dev/null
+ln -snfv $DOTPATH/.nvim $HOME/.config/nvim
+ln -snfv $DOTPATH/.hub $HOME/.config/hub
 
 mkdir -p $HOME/.stack 2>/dev/null
-ln -snfv $DOTPATH/stack/config.yaml $HOME/.stack/config.yaml
+ln -snfv $DOTPATH/.stack/config.yaml $HOME/.stack/config.yaml
 
 ln -snfv $DOTPATH/scripts/up.sh $HOME/.local/bin/up.sh
 
