@@ -30,8 +30,8 @@ nim@0.4.1
 open-recent@5.0.0
 pdf-view@0.72.0
 platformio-ide-terminal@2.9.4
-project-manager@3.3.7
+project-manager@3.3.8
 show-ideographic-space@1.0.2
-vim-mode-plus@1.36.1
+vim-mode-plus@1.36.2
 wordcount@3.1.0
 
