@@ -5,11 +5,11 @@ autocomplete-paths@2.12.2
 autocomplete-python@1.16.0
 busy-signal@2.0.1
 ex-mode@0.18.0
-file-icons@2.1.37
+file-icons@2.1.38
 git-plus@8.7.1
 go-plus@6.1.0
 godef@0.2.5
-highlight-selected@0.16.0
+highlight-selected@0.17.0
 indent-guide-improved@1.4.13
 intentions@1.1.5
 language-latex@1.2.0
