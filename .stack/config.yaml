@@ -10,7 +10,7 @@ templates:
   params:
     author-name: Shinichiro Naito
     author-email: github@shinichironaito.com
-    copyright: 'Copyright (c) 2019 Shinichiro Naito'
+    copyright: 'Copyright (c) 2020 Shinichiro Naito'
     category: 'my category'
-    github-username: shinichir0
+    github-username: shinn1r0
   scm-init: git
