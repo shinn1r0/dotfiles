@@ -4,9 +4,9 @@ DOTPATH=$HOME/.dotfiles
 
 if [ ! -d "${DOTPATH}" ]; then
     if (type git &> /dev/null); then
-        git clone https://github.com/shinichir0/dotfiles.git ${DOTPATH}
+        git clone https://github.com/shinn1r0/dotfiles.git ${DOTPATH}
     elif (type curl &> /dev/null) || (type wget &> /dev/null); then
-        TARBALL="https://github.com/shinichir0/dotfiles/archive/master.tar.gz"
+        TARBALL="https://github.com/shinn1r0/dotfiles/archive/master.tar.gz"
         if (type curl &> /dev/null); then
             curl -L ${TARBALL}
         elif (type wget &> /dev/null); then
@@ -35,7 +35,6 @@ done
 mkdir -p $HOME/.config 2>/dev/null
 mkdir -p $HOME/.local/bin 2> /dev/null
 mkdir -p $HOME/.local/share 2> /dev/null
-mkdir -p $HOME/.ssh 2> /dev/null
 
 mkdir -p $DOTPATH/.nvim/vimfiles/swap 2>/dev/null
 mkdir -p $DOTPATH/.nvim/vimfiles/backup 2>/dev/null

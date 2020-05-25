@@ -7,4 +7,4 @@ chmod 600 github_rsa
 xsel --clipboard --input < ~/.ssh/github_rsa.pub
 cat ~/.ssh/github_rsa.pub
 rm ~/.ssh/github_rsa.pub
-cat $DOTPATH/.ssh/config >> $HOME/.ssh/config
+cat $DOTPATH/ssh/config >> $HOME/.ssh/config
