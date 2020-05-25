@@ -5,7 +5,7 @@ if (! type anyenv &> /dev/null); then
     if [ -d "${DOTPATH}" ]; then
         $DOTPATH/env/anyenv.sh
     else
-        zsh -c "$(curl -fsSL dots.shinichironaito.com/env/anyenv.sh)"
+        zsh -c "$(curl -fsSL dots.shinichiro.dev/env/anyenv.sh)"
     fi
 fi
 

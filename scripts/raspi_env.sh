@@ -14,6 +14,9 @@ if (! type anyenv &> /dev/null); then
     $DOTPATH/env/anyenv.sh
     $DOTPATH/env/pyenv.sh
     $DOTPATH/env/goenv.sh
+    exec $SHELL
+    $DOTPATH/env/python_install.sh
+    $DOTPATH/env/go_install.sh
     #$DOTPATH/env/rbenv.sh
     #$DOTPATH/env/nodenv.sh
 fi

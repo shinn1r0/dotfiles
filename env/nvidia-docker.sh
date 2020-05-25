@@ -9,19 +9,19 @@ if (! type docker &> /dev/null); then
         if [ -d "${DOTPATH}" ]; then
             $DOTPATH/env/docker.sh
         else
-            zsh -c "$(curl -fsSL dots.shinichironaito.com/env/docker.sh)"
+            zsh -c "$(curl -fsSL dots.shinichiro.dev/env/docker.sh)"
         fi
     elif ( $dist = "debian" ); then
         if [ -d "${DOTPATH}" ]; then
             $DOTPATH/env/crostini-docker.sh
         else
-            zsh -c "$(curl -fsSL dots.shinichironaito.com/env/crostini-docker.sh)"
+            zsh -c "$(curl -fsSL dots.shinichiro.dev/env/crostini-docker.sh)"
         fi
     elif ( $dist = "amzn" ); then
         if [ -d "${DOTPATH}" ]; then
             $DOTPATH/env/amzn-docker.sh
         else
-            zsh -c "$(curl -fsSL dots.shinichironaito.com/env/amzn-docker.sh)"
+            zsh -c "$(curl -fsSL dots.shinichiro.dev/env/amzn-docker.sh)"
         fi
     fi
 fi

@@ -8,3 +8,4 @@ anyenv install --force-init
 # anyenv-update
 mkdir -p $(anyenv root)/plugins
 git clone https://github.com/znz/anyenv-update.git $(anyenv root)/plugins/anyenv-update
+exec $SHELL
