@@ -43,9 +43,6 @@ mkdir -p $DOTPATH/.nvim/vimfiles/undo 2>/dev/null
 ln -snfv $DOTPATH/.nvim $HOME/.config/nvim
 ln -snfv $DOTPATH/.hub $HOME/.config/hub
 
-mkdir -p $HOME/.stack 2>/dev/null
-ln -snfv $DOTPATH/.stack/config.yaml $HOME/.stack/config.yaml
-
 ln -snfv $DOTPATH/scripts/up.sh $HOME/.local/bin/up.sh
 
 zcompile $HOME/.zshenv
