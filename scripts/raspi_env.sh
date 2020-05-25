@@ -22,17 +22,21 @@ if (! type anyenv &> /dev/null); then
 fi
 
 if (! type trash-put &> /dev/null); then
-    $DOTPATH/env/trash-cli_build.sh
+    if (type python &> /dev/null); then
+        $DOTPATH/env/trash-cli_build.sh
+    fi
 fi
 if (! type git-secrets &> /dev/null); then
     $DOTPATH/env/git-secrets_build.sh
 fi
 if (! type hub &> /dev/null); then
-    $DOTPATH/env/hub_build.sh
+    if (type go &> /dev/null); then
+        $DOTPATH/env/hub_build.sh
+    fi
 fi
-if (! type stack &> /dev/null); then
-    $DOTPATH/env/stack.sh
-fi
+#if (! type stack &> /dev/null); then
+    #$DOTPATH/env/stack.sh
+#fi
 if (! type choosenim &> /dev/null); then
     cd ~/ && curl https://nim-lang.org/choosenim/init.sh -sSf | sh
 fi
